@@ -1,0 +1,72 @@
+body {
+
+	background-image: url('icebackground.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1 {
+
+	color: white;
+	text-align: center;
+	font-size: 80px;
+	font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+	border-bottom: solid;
+	border-bottom-width: 5px;
+	margin-left: 10%;
+    margin-right: 10%;
+}
+
+img {
+
+	height: 300px;
+	width: 200px;
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border: 35px solid rgba(256, 256, 256, 0.3);
+}
+
+a:link {
+    text-decoration: none;
+    color: white;
+}
+
+a:visited {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+a:active {
+    text-decoration: underline;
+    color: gray;
+}
+
+.link {
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 40%;
+}
+
+#biolink {
+	border-bottom: solid;
+	border-color: white;
+}
+
+#resumelink {
+	border-bottom: solid;
+	border-color: white;
+}
+
+#daydreamlink {
+	border-bottom: solid;
+	border-color: white;
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Daydream Believer</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+<h1 id="title">Daydream Believer</h1>
+
+<video src="http://www.cs.tufts.edu/comp/20/daydream_believer.webm" id="music_video" controls></video>
+
+<div id="lyrics"></div>
+
+<script type="text/javascript">
+
+		var video = document.getElementById("music_video");
+		var div = document.getElementById("lyrics");
+
+		video.ontimeupdate = function () {
+			if (video.currentTime > 6) {
+				div.innerHTML = "<p>Oh, I could hide 'neath the wings</p><p>Of the bluebird as she sings.</p>";
+			} if (video.currentTime > 15) {
+				div.innerHTML = "<p>The six o'clock alarm would never ring.</p><p>But it rings and I rise,</p>";
+			}if (video.currentTime > 25){
+				div.innerHTML = "<p>Wipe the sleep out of my eyes.</p><p>My shavin' razor's cold and it stings.</p>";
+			} if (video.currentTime > 38) {
+				div.innerHTML = "<p class='chorus'>Cheer up, Sleepy Jean.</p>";
+
+			} if (video.currentTime > 41) {
+				div.innerHTML = "<p class='chorus'>Oh, what can it mean.</p>";
+
+			} if (video.currentTime > 44.5) {
+				div.innerHTML = "<p class='chorus'>To a daydream believer</p>";
+
+			} if (video.currentTime > 48) {
+				div.innerHTML = "<p class='chorus'>And a homecoming queen.</p>"
+
+			}if (video.currentTime > 55) {
+				div.innerHTML = "<p>You once thought of me</p><p>As a white knight on a steed.</p> <img src='davy.jpeg' class='davy'>";
+			} if (video.currentTime > 62) {
+				div.innerHTML = "<p>Now you know how happy I can be.</p><p>Oh, and our good times start and end </p>";
+			}if (video.currentTime > 73){
+				div.innerHTML = "<p>Without dollar one to spend.</p><p>But how much, baby, do we really need. <img src='djones.jpg' id='davy1'></p>";
+			} if (video.currentTime > 85) {
+				div.innerHTML = "<p class='chorus'>Cheer up, Sleepy Jean.</p>";
+
+			} if (video.currentTime > 89) {
+				div.innerHTML = "<p class='chorus'>Oh, what can it mean.</p>";
+
+			} if (video.currentTime > 92) {
+				div.innerHTML = "<p class='chorus'>To a daydream believer</p>";
+
+			} if (video.currentTime > 96) {
+				div.innerHTML = "<p class='chorus'>And a homecoming queen.</p>"
+
+			} if (video.currentTime > 102) {
+				div.innerHTML = "<p class='chorus'>Cheer up, Sleepy Jean.</p>";
+
+			} if (video.currentTime > 106) {
+				div.innerHTML = "<p class='chorus'>Oh, what can it mean.</p>";
+
+			} if (video.currentTime > 109) {
+				div.innerHTML = "<p class='chorus'>To a daydream believer</p>";
+
+			} if (video.currentTime > 113) {
+				div.innerHTML = "<p class='chorus'>And a homecoming queen.</p>"
+
+			} if (video.currentTime > 120) {
+				div.innerHTML = "<p></p>"
+
+			} if (video.currentTime > 127.5) {
+				div.innerHTML = "<p class='chorus'>Cheer up, Sleepy Jean.</p>";
+
+			} if (video.currentTime > 131) {
+				div.innerHTML = "<p class='chorus'>Oh, what can it mean.</p>";
+
+			} if (video.currentTime > 134) {
+				div.innerHTML = "<p class='chorus'>To a daydream believer</p>";
+
+			} if (video.currentTime > 138) {
+				div.innerHTML = "<p class='chorus'>And a homecoming queen.</p>"
+
+			} if (video.currentTime > 141) {
+				div.innerHTML = "<p></p>" 
+
+			} if (video.currentTime > 145) {
+				div.innerHTML = "<p class='chorus'>Cheer up, Sleepy Jean.</p>";
+
+			} if (video.currentTime > 148) {
+				div.innerHTML = "<p class='chorus'>Oh, what can it mean.</p>";
+
+			} if (video.currentTime > 151.5) {
+				div.innerHTML = "<p class='chorus'>To a daydream believer</p>";
+
+			} if (video.currentTime > 155) {
+				div.innerHTML = "<p class='chorus'>And a homecoming queen.</p>"
+
+			} if (video.currentTime > 160) {
+				div.innerHTML = "<p></p>"
+
+			}
+		}; 
+
+</script>
+</body>
+</html>	
