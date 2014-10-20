@@ -48,7 +48,7 @@ function getMyLocation() {
     }
 }
 
-/*
+
 var xmlhttp = new XMLHttpRequest();
 var url = "http://chickenofthesea.herokuapp.com/sendLocation";
 
@@ -66,5 +66,5 @@ xmlhttp.send();
 function myFunction(jsonData) {
 
     document.getElementById("divT").innerHTML = jsonData;
-}*/
+}
 
