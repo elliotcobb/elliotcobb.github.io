@@ -1,70 +1,64 @@
+// approximate boston lat lng
+var lat = 42.1;
+var lng = -71.11;
+
 var map;
-var lat = -99999;
-var lng = -99999;
 
-function initialize() {
-    getMyLocation();
-    var mapOptions = {
-        center: { lat: 42.4, lng: -71.116},
-        zoom: 8 
-    };
+var userMarker;
 
-    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+function init()
+{
+        var initCenter = new google.maps.LatLng(42.3599611, -71.0567528);
+
+        // Set up map
+        var myOptions = {
+                zoom: 13, // The larger the zoom number, the bigger the zoom
+                center: initCenter,
+                mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+                                
+        // Create the map in the "map_canvas" <div>
+        map = new google.maps.Map(document.getElementById("map_canvas"), myOptions);
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
+if (navigator.geolocation) {
 
-// sets the center of the map to be at global varibale coordinates lat lng
-function setCenter() {
-    map.setCenter({lat: lat, lng: lng});
-}
-
-// takes in latitute, longitude, and a url of an icon image in single quotes
-// example: 'myImage.png'
-function newMarker(lat1, lng1, icon) {
-    new google.maps.Marker({position: {lat: lat1, lng: lng1}, map: map, icon: icon});
-}
-
-// geolocation function
-// called when body has finished loading
-function getMyLocation() {
-
-    elem = document.getElementById("loc");
-    if (navigator.geolocation) {
-        // the navigator.geolocation object is supported on your browser
-        //console.log("Call before navigator.geolocation");
         navigator.geolocation.getCurrentPosition(function(position) {
-                //console.log("Got location");
                 lat = position.coords.latitude;
                 lng = position.coords.longitude;
-
-                setCenter();
-                newMarker(lat, lng, 'broncos.png');
+                addUserMarker();
+                addInfoWindow();
+                clearInterval(locationTimer);
         });
-        //console.log("Made the call to get location");
-    }
-    else {
+
+} else {
         alert("Geolocation is not supported by your web browser.  What a shame!");
-    }
 }
 
+function addUserMarker() {
 
-var xmlhttp = new XMLHttpRequest();
-var url = "http://chickenofthesea.herokuapp.com/sendLocation";
+        loc = new google.maps.LatLng(lat, lng);
+        // Create a marker                              
+        userMarker = new google.maps.Marker({
+                position: loc,
+                title: "Your Location",
+                icon: 'broncos.png'
+        });
 
-xmlhttp.onreadystatechange = function() {
-    if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-        var mapData = JSON.parse(xmlhttp.responseText);
-        myFunction(mapData);
-    }
+        // add marker to map
+        userMarker.setMap(map);
+        map.setCenter({lat: lat, lng: lng});
 }
 
-xmlhttp.open("GET", url, true);
-xmlhttp.send();
-
-// called during xmlHTTPrequest
-function myFunction(jsonData) {
-
-    document.getElementById("divT").innerHTML = jsonData;
+function addInfoWindow() {
+        // This is a global info window...
+        var infowindow = new google.maps.InfoWindow();
+                                
+        // Open info window on click of userMarker
+        google.maps.event.addListener(userMarker, 'click', function() {
+                infowindow.setContent(userMarker.title);
+                infowindow.open(map, userMarker);
+        });
 }
+
 
