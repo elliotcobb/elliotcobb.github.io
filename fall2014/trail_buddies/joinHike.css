@@ -1,0 +1,68 @@
+html {
+        height: 100%;
+}
+
+h2 {
+    font-family: AmericanTypewriter;
+    font-size: 30px;
+}
+
+body {
+        height: 100%;
+        margin: 15px;
+        padding: 0px;
+        background-color: green;
+        background-image: url(mountains.png);
+}
+#map_canvas {
+        margin: auto;
+        height: 75%;
+        width: 65%;
+
+}
+
+.buttons {
+    position: relative;
+    top: 35px;
+    font-size: 25px;
+    font-style: Courier-bold;
+    color: blue;
+    cursor: pointer;
+}
+#submit {
+    left: 126px;
+
+}
+
+#text {
+    height: 300px;
+    width: 200px;
+    font-size: 20px;
+}
+#input_boxes {
+    height: 300px;
+    width: 200px;
+    position: relative;
+    left: 175px;
+    bottom: 299px;
+}
+
+.txtBox {
+    margin-bottom: 31px;
+}
+
+#popup_message {		//for adding a hike
+    font-size: 40px;
+    color: purple;
+    font-style: Arial;
+}
+#popup_message2 {		//for joining a hike
+    font-size: 40px;
+    color: purple;
+    font-style: Arial;
+}
+
+.highlight
+{
+    border: 1px solid red !important;
+}

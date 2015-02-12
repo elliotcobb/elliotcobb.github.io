@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<!-- Note: We may change this file  into a javascript
+     functionality within index.html in the future -->
+
+    <head>
+         <title>Add a Hike!</title>
+	 <link rel="stylesheet" href="hike.css" />
+
+
+    
+    </head>
+
+
+
+<body>
+      <!-- TODO: choose which of these fields to make into required fields -->
+      <!-- Change the value of either  the "id" or the "name" depending upon
+	  the difference between the two? -->
+      <!-- change h4 to h1 and change settings of h1 within the css file so that
+	   the font is not so large -->
+      <h4>Name:<input type="text" id="txtBox" name="nameBox" size="30" /></h4>
+      <h4>Email:<input type="text" id="txtBox" name="emailBox" size="30" /></h4>
+      <h4>Hike Address: <input type="text" id="txtBox" name="hikeAddressBox"
+			       size="30" /></h4>
+      <h4>Date and Time: <input type="text" id="txtBox" name="dateTimeBox"
+				size="30" /></h4>
+      <h4>Estimated Length: <input type="text" id="txtBox" name="hikeLengthBox"
+				size="30"/></h4>
+      <h4>Hike Description: <input type="text" id="txtBox" name="hikeDescBox"
+				size="30"/></h4>
+    </body>
+
+
+
+</html>
+

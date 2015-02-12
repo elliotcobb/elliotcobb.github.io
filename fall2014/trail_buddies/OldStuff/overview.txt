@@ -1,0 +1,34 @@
+Summary of files:
+
+index.html:
+	- generate googlemap on background
+	- center googlemap to person's location
+	- link to take user to addHike.html
+
+addHike.html:
+	- (possibly temporary and can be turned into a javascript 
+	  funcitonality within index.html)
+	- input boxes with labels: (have the input boxes aligned)
+	  	- name
+		- email
+		- hike location
+		- date and time
+		- estimated length
+		- hike description
+	- submit button to return to index.html
+
+hike.css:
+	- (similar to mmap's css file)
+	- map canvas
+	- align the text boxes on hike.html	
+
+
+To look into--
+   Taylor:
+	- databasing
+   Elliot:
+        - boostrap front-end framework
+   Lila:
+        - Googlemap API
+   Sam:
+        - "Restful APIs" and email notifications

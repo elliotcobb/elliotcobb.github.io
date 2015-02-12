@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+
+<html>
+
+        <head>
+                <title>Trail Buddies</title>
+                <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+                <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true&amp;libraries=places"></script>
+                <link rel="stylesheet" href="style.css" />
+                <script type="text/javascript" href= "map.js"></script>
+        </head>
+
+        <body>
+                <h2>Trail Buddies!</h2>
+                <a href="addhike.html">Add a Hike</a>
+                <div id="map_canvas"></div>
+        </body>
+</html>
+
+
+

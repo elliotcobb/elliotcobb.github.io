@@ -1,0 +1,26 @@
+html {
+        height: 100%;
+}
+
+body {
+        height: 100%;
+        margin: 0px;
+        padding: 0px;
+        background-color: green;
+}
+#map_canvas {
+        height: 80%;
+        width: 100%;
+
+}
+#txtBox {               /* So that all text boxes on addHike.html */
+                        /*             appear aligned in a column.*/
+         position: absolute;
+         left: 175px;    
+}
+
+#txtBox2 {
+	 position: absolute;
+	 left: 175px;
+	 height: 100px;
+}
