@@ -47,7 +47,7 @@ function addUserMarker() {
 
         // add marker to map
         userMarker.setMap(map);
-        map.setCenter({lat: lat, lng: lng});
+        map.panTo(loc);
 }
 
 function addInfoWindow() {
