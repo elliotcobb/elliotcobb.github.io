@@ -19,9 +19,9 @@
             <a href="portfolio"><h1>Elliot Cobb</h1></a>
         </div>
         <div class="titlegyphs">
-            <a href="https://github.com/elliotcobb"><img class="glyph" src="github.png" alt="Elliot's github page"></a>
-            <a href="https://github.com/elliotcobb"><img class="glyph" src="location.svg" alt="Elliot's github page"></a>
-            <a href="https://github.com/elliotcobb"><img class="glyph" src="linkedin.svg" alt="Elliot's github page"></a>
+            <a href="https://github.com/elliotcobb"><img class="glyph" src="github.svg" alt="Elliot's github page"></a>
+            <a href="https://www.linkedin.com/pub/elliot-cobb/7b/376/809"><img class="glyph" src="linkedinnew.svg" alt="Elliot's linkedin page"></a>
+            <a href="http://elliotcobb.github.io/fall2014/home"><img class="glyph" src="stacknew.svg" alt="site archives"></a>
         </div>
     </div>
 
@@ -51,8 +51,8 @@
         var st = $(this).scrollTop();
         if (st > lastScrollTop){
             // downscroll code
-
-            $( ".box_bottom" ).stop().animate( {background: "rgba(0, 0, 0, 0.16)"}, {duration:500});
+            console.log("groose");
+            $( ".box_bottom" ).animate( {background: "rgba(0, 0, 0, 0.16)"}, {duration:500});
             //$( ".box_bottom" ).stop().animate( {background: "rgba(0, 0, 0, 0)"}, {duration:500});
 
             //$( ".box_bottom" ).addClass("shade");
@@ -64,6 +64,16 @@
             $( ".box_top" ).removeClass("shade");
         }
         lastScrollTop = st;
+    });
+
+    $( window ).scroll(function() {   
+       if($( window ).scrollTop() + $( window ).height() == $( document ).height()) {
+           //alert("bottom!");
+           //$( ".box_bottom" ).animate( {background: "rgba(0, 0, 0, 0.16)"}, {duration:500});
+           $( ".box_bottom" ).addClass("shade");
+           $( ".box_bottom" ).removeClass("shade");
+
+       }
     });
 
     // $(".title").hover(

@@ -19,6 +19,7 @@ h1 {
         color: white;
         font-size: 350%;
         font-family: 'Raleway', sans-serif;
+        margin-bottom: 5%;
 }
 
 .title {
@@ -60,5 +61,7 @@ h1 {
         height: 80px;
         width: 80px;
         fill: white;
+        margin-right: 5%;
+        margin-top: 5%;
 }
 
