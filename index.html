@@ -2,13 +2,82 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+
+<link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="index.css">
+
 
 </head>
 
 <body>
+    <div class="box_top"></div>
+    <div class="box_bottom"></div>
+    <div class="title">
+        <div class="titlename">
+            <a href="portfolio"><h1>Elliot Cobb</h1></a>
+        </div>
+        <div class="titlegyphs">
+            <a href="https://github.com/elliotcobb"><img class="glyph" src="github.png" alt="Elliot's github page"></a>
+            <a href="https://github.com/elliotcobb"><img class="glyph" src="location.svg" alt="Elliot's github page"></a>
+            <a href="https://github.com/elliotcobb"><img class="glyph" src="linkedin.svg" alt="Elliot's github page"></a>
+        </div>
+    </div>
 
-    <h1>Elliot Cobb</h1>
+<script type="text/javascript">
+
+
+    $(".box_top").hover(
+        function() {
+            $( this ).addClass("shade");
+        }, function() {
+            $( this ).removeClass("shade");
+        }
+    );
+
+    $(".box_bottom").hover(
+        function() {
+            $( this ).addClass("shade");
+        }, function() {
+            $( this ).removeClass("shade");
+        }
+    );
+
+
+    // on scroll down or scroll up, flash the shade class on either box bottom or box top
+    var lastScrollTop = 0;
+    $(window).scroll(function(event){
+        var st = $(this).scrollTop();
+        if (st > lastScrollTop){
+            // downscroll code
+
+            $( ".box_bottom" ).stop().animate( {background: "rgba(0, 0, 0, 0.16)"}, {duration:500});
+            //$( ".box_bottom" ).stop().animate( {background: "rgba(0, 0, 0, 0)"}, {duration:500});
+
+            //$( ".box_bottom" ).addClass("shade");
+            //$( ".box_bottom" ).removeClass("shade");
+
+        } else {
+            // upscroll code
+            $( ".box_top" ).addClass("shade");
+            $( ".box_top" ).removeClass("shade");
+        }
+        lastScrollTop = st;
+    });
+
+    // $(".title").hover(
+    //     function() {
+    //         $( ".box_bottom" ).addClass("shade");
+    //         $( ".box_top" ).addClass("shade");
+    //     }, function() {
+    //         $( ".box_bottom" ).removeClass("shade");
+    //         $( ".box_top" ).removeClass("shade");
+    //     }
+    // );
+
+</script>
+
 
 </body>
 </html>
