@@ -17,17 +17,15 @@ a:link {
 
 h1 {
         color: white;
-        font-size: 350%;
+        font-size: 360%;
         font-family: 'Raleway', sans-serif;
-        margin-bottom: 5%;
+        margin-bottom: 6%;
 }
 
 .title {
         color: white;
         width: 300px;
 
-        color: white;
-        width: 300px;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -62,6 +60,6 @@ h1 {
         width: 80px;
         fill: white;
         margin-right: 5%;
-        margin-top: 5%;
+        margin-bottom: 5%;
 }
 
