@@ -6,47 +6,59 @@
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 
 <link href='http://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
 <link rel="stylesheet" type="text/css" href="index.css">
 
 
 </head>
 
 <body>
-    <div class="box_top"></div>
-    <div class="box_bottom"></div>
+<!--     <div class="box_top"></div>
+    <div class="box_bottom"></div> -->
+
+
     <div class="title">
         <div class="titlename">
-            <a href="portfolio"><h1>Elliot Cobb</h1></a>
+            <a href="https://github.com/elliotcobb"><h1>Elliot Cobb</h1></a>
         </div>
         <div class="titlegyphs">
-            <a href="https://github.com/elliotcobb"><img class="glyph" src="github.svg" alt="Elliot's github page"></a>
-            <a href="https://www.linkedin.com/pub/elliot-cobb/7b/376/809"><img class="glyph" src="linkedinnew.svg" alt="Elliot's linkedin page"></a>
-            <a href="http://elliotcobb.github.io/fall2014/homepage"><img class="glyph" src="stacknew.svg" alt="site archives"></a>
+            <a href="https://github.com/elliotcobb">
+                <object class="glyph" type="image/svg+xml" data="github.svg"></object> 
+            </a>
+            <a href="https://www.linkedin.com/pub/elliot-cobb/7b/376/809">
+                <object class="glyph" type="image/svg+xml" data="linkedin.svg"></object> 
+            </a>
+            <a href="http://elliotcobb.github.io/fall2014/homepage">
+                <object class="glyph rightglyph" type="image/svg+xml" data="stack.svg"></object> 
+            </a>
         </div>
     </div>
+
+
+
 
 <script type="text/javascript">
 
 
-    $(".box_top").hover(
-        function() {
-            $( this ).addClass("shade");
-        }, function() {
-            $( this ).removeClass("shade");
-        }
-    );
+    // $(".box_top").hover(
+    //     function() {
+    //         $( this ).addClass("shade");
+    //     }, function() {
+    //         $( this ).removeClass("shade");
+    //     }
+    // );
 
-    $(".box_bottom").hover(
-        function() {
-            $( this ).addClass("shade");
-        }, function() {
-            $( this ).removeClass("shade");
-        }
-    );
+    // $(".box_bottom").hover(
+    //     function() {
+    //         $( this ).addClass("shade");
+    //     }, function() {
+    //         $( this ).removeClass("shade");
+    //     }
+    // );
 
 
-    // on scroll down or scroll up, flash the shade class on either box bottom or box top
-    var lastScrollTop = 0;
+    //on scroll down or scroll up, flash the shade class on either box bottom or box top
+    /*var lastScrollTop = 0;
     $(window).scroll(function(event){
         var st = $(this).scrollTop();
         if (st > lastScrollTop){
@@ -74,7 +86,7 @@
            $( ".box_bottom" ).removeClass("shade");
 
        }
-    });
+    });*/
 
     // $(".title").hover(
     //     function() {
@@ -86,7 +98,7 @@
     //     }
     // );
 
-</script>
+</script> 
 
 
 </body>
