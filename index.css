@@ -19,14 +19,26 @@ a:link {
         text-decoration: none;
 }
 
+a.svglink {
+        position: relative;
+        display: inline-block; 
+}
+a.svglink:after {
+        content: ""; 
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left:0;
+}
+
 h1 {
         color: white;
         font-size: 360%;
         font-family: 'Raleway', sans-serif;
-        margin-bottom: 4%;
+        margin-bottom: 2%;
         margin-top: 15%;
 }
-
 
 .title {
         color: white;
