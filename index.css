@@ -48,12 +48,17 @@ h2 {
         text-align: center;
         color: inherit;
         font-size: 260%;
-        font-family: 'Raleway', sans-serif;  
+        font-family: 'Raleway', sans-serif;
+        margin-top: 35%;  
+}
+
+.toph2 {
+        margin-top: 20%;
 }
 
 p {
-        padding-left: 80px;
-        padding-right: 80px; 
+        padding-left: 150px;
+        padding-right: 150px; 
         color: inherit;
         font-size: 160%;
         font-family: 'Raleway', sans-serif;
@@ -156,10 +161,30 @@ a.svglink:after {
 
 h1 {
         color: white;
-        font-size: 360%;
+        font-size: 460%;
         font-family: 'Raleway', sans-serif;
         margin-bottom: 2%;
         margin-top: 15%;
+}
+
+h2 {
+        text-align: center;
+        color: inherit;
+        font-size: 200%;
+        font-family: 'Raleway', sans-serif;
+        margin-top: 80%;  
+}
+
+.toph2 {
+        margin-top: 50%; 
+}
+
+p {
+        padding-left: 10px;
+        padding-right: 10px; 
+        color: inherit;
+        font-size: 130%;
+        font-family: 'Raleway', sans-serif;
 }
 
 .title {
