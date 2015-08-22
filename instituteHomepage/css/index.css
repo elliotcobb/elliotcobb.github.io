@@ -5,6 +5,7 @@ html {
 body {
     margin: 0px;
     height: 100%;
+    text-align: center;
 }
 
 a:link {
@@ -54,9 +55,24 @@ video {
     /*width: auto;*/
 }
 
+.nav-pills {
+    display: inline-block;
+    margin-bottom: 10px;
+    /*background-color: #111111;*/
+}
+
+.pills .active a,
+.pills .active a:hover {
+    background-color: #111111;
+}
+
 .the-team-content {
     text-align: center;
     display: inline-block;
     margin-left: 10%;
     margin-right: 10%;
+}
+
+.videos-content {
+    display: none;
 }
