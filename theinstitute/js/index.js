@@ -17,6 +17,16 @@ $('.pill-nav').click( function() {
     }
 });
 
+$('.the-team-content .thumbnail')
+    .mouseenter( function() {
+        //$(this).find('.curtain').show();
+        $(this).find('.headshot').addClass('shaded-headshot');
+    })
+    .mouseleave( function () {
+        $(this).find('.headshot').removeClass('shaded-headshot');
+    })
+;
+
 $(document).ready( function() {
     $('.the-team').click();
 });

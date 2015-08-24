@@ -76,3 +76,16 @@ video {
 .videos-content {
     display: none;
 }
+
+.thumbnail {
+    position: relative;
+}
+
+.headshot {
+}
+
+.shaded-headshot {
+    filter: opacity(0.3);
+    -webkit-filter: opacity(0.3);
+
+}
