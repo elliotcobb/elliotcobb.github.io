@@ -82,6 +82,10 @@ video {
 .headshot {
 }
 
+.headshot2 {
+    display: none;
+}
+
 .shaded-headshot {
     filter: opacity(0.3);
     -webkit-filter: opacity(0.3);

@@ -2,6 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c90b51-5186-4966-bd84-c9050345e9cd" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/ceiliHale.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/chloeHyman.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/elliotCobb.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/emilyBaker.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/jacobBarr.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/jacobHayfe.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/jehanMadhani.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/johnMerfeld.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/lilyBlumkin.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/meghanWales.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/samGordon.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/samZinn.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/content/sarahGruen.png" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/theinstitute/content/kramer.jpg" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theinstitute/css/index.css" afterPath="$PROJECT_DIR$/theinstitute/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theinstitute/index.html" afterPath="$PROJECT_DIR$/theinstitute/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theinstitute/js/index.js" afterPath="$PROJECT_DIR$/theinstitute/js/index.js" />
@@ -33,8 +47,8 @@
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theinstitute/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="1605">
-              <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="1665">
+              <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -43,8 +57,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/theinstitute/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.59210527" vertical-offset="0" max-vertical-offset="1920">
-              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+            <state vertical-scroll-proportion="0.14473684" vertical-offset="1416" max-vertical-offset="2580">
+              <caret line="101" column="14" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -53,8 +67,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theinstitute/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-              <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -74,8 +88,8 @@
         <option value="$PROJECT_DIR$/instituteHomepage/css/index.css" />
         <option value="$PROJECT_DIR$/instituteHomepage/js/index.js" />
         <option value="$PROJECT_DIR$/instituteHomepage/index.html" />
-        <option value="$PROJECT_DIR$/theinstitute/js/index.js" />
         <option value="$PROJECT_DIR$/theinstitute/css/index.css" />
+        <option value="$PROJECT_DIR$/theinstitute/js/index.js" />
         <option value="$PROJECT_DIR$/theinstitute/index.html" />
       </list>
     </option>
@@ -206,10 +220,10 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/theinstitute/content" />
+      <recent name="$PROJECT_DIR$/theinstitute" />
       <recent name="$PROJECT_DIR$/instituteHomepage/content" />
       <recent name="$PROJECT_DIR$/instituteHomepage/images" />
       <recent name="$PROJECT_DIR$/londonHomepage" />
-      <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
   <component name="RunManager">
@@ -423,26 +437,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theinstitute/js/index.js">
+    <entry file="file://$PROJECT_DIR$/theinstitute/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="1665">
+          <caret line="86" column="1" selection-start-line="86" selection-start-column="1" selection-end-line="86" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theinstitute/css/index.css">
+    <entry file="file://$PROJECT_DIR$/theinstitute/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="882" max-vertical-offset="1605">
-          <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/theinstitute/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.59210527" vertical-offset="0" max-vertical-offset="1920">
-          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.14473684" vertical-offset="1416" max-vertical-offset="2580">
+          <caret line="101" column="14" selection-start-line="101" selection-start-column="14" selection-end-line="101" selection-end-column="14" />
           <folding />
         </state>
       </provider>
