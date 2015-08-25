@@ -33,14 +33,6 @@ h1 {
     font-family: 'Arvo', serif;
 }
 
-h2 {
-    color: #111;
-    text-align: center;
-    font-size: 260%;
-    font-family: 'Arvo', serif;
-    margin-bottom: 10%;
-}
-
 p {
     padding-left: 150px;
     padding-right: 150px;
@@ -81,6 +73,12 @@ video {
     position: relative;
 }
 
+.placeholder {
+    height: 340px;
+    width: 340px;
+    visibility: hidden;
+}
+
 .headshot {
 }
 
@@ -88,4 +86,17 @@ video {
     filter: opacity(0.3);
     -webkit-filter: opacity(0.3);
 
+}
+
+.nametag {
+    position: absolute;
+    bottom: 37%;
+    color: #666666;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    font-size: 200%;
+    font-family: 'Arvo', serif;
+    display: none;
 }

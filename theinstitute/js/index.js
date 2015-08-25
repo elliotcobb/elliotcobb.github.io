@@ -21,9 +21,11 @@ $('.the-team-content .thumbnail')
     .mouseenter( function() {
         //$(this).find('.curtain').show();
         $(this).find('.headshot').addClass('shaded-headshot');
+        $(this).find('.nametag').show();
     })
     .mouseleave( function () {
         $(this).find('.headshot').removeClass('shaded-headshot');
+        $(this).find('.nametag').hide();
     })
 ;
 
