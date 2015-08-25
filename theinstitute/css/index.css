@@ -80,6 +80,8 @@ video {
 }
 
 .headshot {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
 }
 
 .headshot2 {
