@@ -106,3 +106,15 @@ video {
     font-family: 'Arvo', serif;
     display: none;
 }
+
+.about-content {
+    display: none;
+    margin: 5%;
+}
+
+.about-text {
+    color: inherit;
+    font-size: 160%;
+    text-align: left;
+    font-family: 'Arvo', serif;
+}
