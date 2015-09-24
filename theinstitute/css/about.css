@@ -38,7 +38,6 @@ p {
     padding-right: 150px;
     color: inherit;
     font-size: 160%;
-    font-family: 'Raleway', sans-serif;
 }
 
 .nav-pills {
@@ -51,47 +50,9 @@ p {
     background-color: #111111;
 }
 
-.the-team-content {
-    text-align: center;
-    display: inline-block;
-    margin-left: 10%;
-    margin-right: 10%;
-}
-
-.thumbnail {
-    position: relative;
-}
-
-.placeholder {
-    height: 340px;
-    width: 340px;
-    visibility: hidden;
-}
-
-.headshot {
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-}
-
-.headshot-bio {
-    display: none;
-}
-
-.shaded-headshot {
-    filter: opacity(0.3);
-    -webkit-filter: opacity(0.3);
-
-}
-
-.nametag {
-    position: absolute;
-    bottom: 37%;
-    color: #666666;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    font-size: 200%;
+.about-content {
+    margin: 5%;
+    color: inherit;
+    text-align: left;
     font-family: 'Arvo', serif;
-    display: none;
 }

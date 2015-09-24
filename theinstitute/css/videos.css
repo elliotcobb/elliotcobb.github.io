@@ -44,6 +44,7 @@ p {
 .nav-pills {
     display: inline-block;
     margin-bottom: 10px;
+    /*background-color: #111111;*/
 }
 
 .pills .active a,
@@ -51,47 +52,11 @@ p {
     background-color: #111111;
 }
 
-.the-team-content {
-    text-align: center;
-    display: inline-block;
-    margin-left: 10%;
-    margin-right: 10%;
+video {
+    max-width: 100%;
+    height: auto;
+    /*width: auto;*/
 }
 
-.thumbnail {
-    position: relative;
-}
-
-.placeholder {
-    height: 340px;
-    width: 340px;
-    visibility: hidden;
-}
-
-.headshot {
-    filter: grayscale(100%);
-    -webkit-filter: grayscale(100%);
-}
-
-.headshot-bio {
-    display: none;
-}
-
-.shaded-headshot {
-    filter: opacity(0.3);
-    -webkit-filter: opacity(0.3);
-
-}
-
-.nametag {
-    position: absolute;
-    bottom: 37%;
-    color: #666666;
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-    font-size: 200%;
-    font-family: 'Arvo', serif;
-    display: none;
+.videos-content {
 }
