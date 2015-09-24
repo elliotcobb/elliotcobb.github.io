@@ -51,6 +51,10 @@ p {
     background-color: #111111;
 }
 
+.the-team-content-holder {
+    display: none;
+}
+
 .the-team-content {
     text-align: center;
     display: inline-block;
