@@ -66,7 +66,6 @@ video {
 }
 
 .videos-content {
-    display: none;
 }
 
 .thumbnail {
@@ -84,7 +83,7 @@ video {
     -webkit-filter: grayscale(100%);
 }
 
-.headshot2 {
+.headshot-bio {
     display: none;
 }
 
@@ -108,7 +107,6 @@ video {
 }
 
 .about-content {
-    display: none;
     margin: 5%;
 }
 
