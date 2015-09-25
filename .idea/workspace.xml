@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="52c90b51-5186-4966-bd84-c9050345e9cd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/css/basic.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/css/quiz.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/quiz.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/theinstitute/js/quiz.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theinstitute/css/about.css" afterPath="$PROJECT_DIR$/theinstitute/css/about.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theinstitute/about.html" afterPath="$PROJECT_DIR$/theinstitute/about.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theinstitute/css/index.css" afterPath="$PROJECT_DIR$/theinstitute/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theinstitute/index.html" afterPath="$PROJECT_DIR$/theinstitute/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theinstitute/css/videos.css" afterPath="$PROJECT_DIR$/theinstitute/css/videos.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theinstitute/quiz.html" afterPath="$PROJECT_DIR$/theinstitute/quiz.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/theinstitute/videos.html" afterPath="$PROJECT_DIR$/theinstitute/videos.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="elliotcobb.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,6 +30,36 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="about.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/theinstitute/about.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="975">
+              <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="videos.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/theinstitute/videos.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.590379" vertical-offset="0" max-vertical-offset="1035">
+              <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/theinstitute/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="2550">
+              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="quiz.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theinstitute/css/quiz.css">
           <provider selected="true" editor-type-id="text-editor">
@@ -47,11 +70,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quiz.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="quiz.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/theinstitute/quiz.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.89067054" vertical-offset="274" max-vertical-offset="2220">
-              <caret line="59" column="83" selection-start-line="59" selection-start-column="83" selection-end-line="59" selection-end-column="83" />
+            <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="2205">
+              <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
               <folding />
             </state>
           </provider>
@@ -90,12 +113,12 @@
         <option value="$PROJECT_DIR$/theinstitute/css/basic.css" />
         <option value="$PROJECT_DIR$/theinstitute/css/index.css" />
         <option value="$PROJECT_DIR$/theinstitute/css/videos.css" />
-        <option value="$PROJECT_DIR$/theinstitute/about.html" />
-        <option value="$PROJECT_DIR$/theinstitute/index.html" />
-        <option value="$PROJECT_DIR$/theinstitute/videos.html" />
         <option value="$PROJECT_DIR$/theinstitute/css/quiz.css" />
         <option value="$PROJECT_DIR$/theinstitute/js/quiz.js" />
         <option value="$PROJECT_DIR$/theinstitute/quiz.html" />
+        <option value="$PROJECT_DIR$/theinstitute/index.html" />
+        <option value="$PROJECT_DIR$/theinstitute/about.html" />
+        <option value="$PROJECT_DIR$/theinstitute/videos.html" />
       </list>
     </option>
   </component>
@@ -628,22 +651,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/theinstitute/about.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24052478" vertical-offset="0" max-vertical-offset="975">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/theinstitute/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24052478" vertical-offset="0" max-vertical-offset="2550">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/theinstitute/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="150" max-vertical-offset="945">
@@ -664,14 +671,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="710">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/theinstitute/videos.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24052478" vertical-offset="0" max-vertical-offset="1035">
-          <caret line="11" column="64" selection-start-line="11" selection-start-column="64" selection-end-line="11" selection-end-column="64" />
           <folding />
         </state>
       </provider>
@@ -702,8 +701,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/theinstitute/quiz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.89067054" vertical-offset="274" max-vertical-offset="2220">
-          <caret line="59" column="83" selection-start-line="59" selection-start-column="83" selection-end-line="59" selection-end-column="83" />
+        <state vertical-scroll-proportion="-16.25" vertical-offset="0" max-vertical-offset="2205">
+          <caret line="26" column="43" selection-start-line="26" selection-start-column="43" selection-end-line="26" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theinstitute/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="2550">
+          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theinstitute/about.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="975">
+          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/theinstitute/videos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.590379" vertical-offset="0" max-vertical-offset="1035">
+          <caret line="27" column="30" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
           <folding />
         </state>
       </provider>
