@@ -31,7 +31,7 @@ function findMatch() {
 
 function countAnswerMatches(userAnswers) {
 
-    // creates zero-filled array of length 5
+    // creates zero-filled array of length NUM_PEOPLE
     var userMatches = Array.apply(null, Array(NUM_PEOPLE)).map(Number.prototype.valueOf,0);
 
     for (var i = 0; i < NUM_PEOPLE; i++) {
