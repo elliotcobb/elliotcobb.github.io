@@ -39,8 +39,12 @@
 }
 
 .answer {
-    padding: 2px;
+    padding: 4px;
     margin-top: 3px;
+}
+
+.shaded-answer {
+    background-color: rgba(10, 200, 10, 0.2);
 }
 
 .answer-radio {

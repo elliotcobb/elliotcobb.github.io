@@ -56,4 +56,14 @@ function getMatchIndex(userMatches) {
     return matchIndexArray;
 }
 
-
+$(document).ready( function() {
+    //highlight answers to questions on mouseover
+    $('.question-body .answer')
+        .mouseenter( function() {
+            $(this).addClass('shaded-answer');
+        })
+        .mouseleave( function () {
+            $(this).removeClass('shaded-answer');
+        })
+    ;
+});
