@@ -34,7 +34,8 @@
 
 <div class="quiz-content">
     <form class="quiz-form">
-            <div class="question" ng-repeat="q in questions" id="question{{q.qid}}">
+        <div class="question-box " ng-repeat="q in questions">
+            <div class="question" id="question{{q.qid}}">
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h3 class="panel-title">{{q.question}}</h3>
@@ -42,13 +43,16 @@
                     <div class="panel-body">
                         <div class="radio" ng-repeat="answer in q.answers track by $index">
                             <label>
-                                <input type="radio" name="question{{q.qid}}" id="q{{q.qid}}a{{$index}}" value="{{$index}}">
+                                <input type="radio" name="question{{q.qid}}" id="q{{q.qid}}a{{$index}}" value="{{$index + 1}}">
                                 {{answer}}
                             </label>
                         </div>
                     </div>
                 </div>
             </div>
+            <button class="btn btn-default prev-question" type="back"> < </button>
+            <button class="btn btn-default next-question" type="next"> > </button>
+        </div>
 
         <button class="btn btn-default submit-quiz" type="submit">Submit</button>
     </form>
