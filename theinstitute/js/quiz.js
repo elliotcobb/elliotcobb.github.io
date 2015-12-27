@@ -66,4 +66,8 @@ $(document).ready( function() {
             $(this).removeClass('shaded-answer');
         })
     ;
+
+    $('.question-body .answer').click( function () {
+        $(this).find('input.answer-radio').prop("checked", true);
+    });
 });
