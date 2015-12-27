@@ -12,6 +12,8 @@ const STORED_PEOPLE =
 
 const NUM_PEOPLE = 4;
 const NUM_QUESTIONS = 3;
+const Q_COLOR = 'rgba(10, 200, 10, 0.2)';
+const SELECTED_Q_COLOR = 'rgba(10, 10, 200, 0.2)'
 
 $('.submit-quiz').click( function( event ) {
     findMatch();
@@ -60,14 +62,26 @@ $(document).ready( function() {
     //highlight answers to questions on mouseover
     $('.question-body .answer')
         .mouseenter( function() {
-            $(this).addClass('shaded-answer');
+            $(this).addClass('hover-answer');
         })
         .mouseleave( function () {
-            $(this).removeClass('shaded-answer');
+            $(this).removeClass('hover-answer');
         })
     ;
 
     $('.question-body .answer').click( function () {
         $(this).find('input.answer-radio').prop("checked", true);
+
+        var selectedAnswerNum = $(this).closest('.question-body').attr('data-selected-answer');
+        if (selectedAnswerNum != "") {
+            $(this).closest('.question-body').find('div.answer[data-answer-num=' + selectedAnswerNum + ']').removeClass('chosen-answer');
+        }
+
+        $(this).closest('.question-body').attr('data-selected-answer', $(this).attr('data-answer-num'));
+        $(this).addClass('chosen-answer');
+    });
+
+    $('input.answer-radio').on('change', function() {
+       console.log('moochie');
     });
 });
