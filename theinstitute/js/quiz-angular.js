@@ -1,5 +1,6 @@
 const QUESTIONS_DB =
 [
+    {qid : '0', question : 'What is your dream date?' , answers : ['Ice skating in the park', 'Streaking in the park', 'Starting fires in the park', 'Waterboarding in the park']},
     {qid : '1', question : 'Do you have lice?' , answers : ['Yes', 'No']},
     {qid : '2', question : 'Which pasta shape best describes your political affiliation?' , answers : ['Angel hair', 'Wagon wheels', 'Elbows', 'Bowties']},
     {qid : '3', question : 'How often do you floss?' , answers : ['Once in a lifetime', 'Three times everyday, no more, no less', 'Never, flossing is for the weak', 'Right before I go to the dentist']},
@@ -17,13 +18,11 @@ const QUESTIONS_DB =
     {qid : '15', question : 'What would you rather have stuck to your fingers?' , answers : ['Other people\'s fingers', 'Magnets', 'Knives', 'The souls of your enemies']},
     {qid : '16', question : 'If you were to have just realized you were in love and that the love of your life was right there in front of you the whole time (probably performing and writing sketch comedy on your college campus) what song would be playing as you marched with purpose to go to them?' , answers : ['\"Signed, Sealed, Delivered (I\'m Yours)\" Tom Hanks is a PRINCE among men.', '\"It Must Have Been Love\" Richard Gere is climbin\' his way up that fire escape, umbrella and flowers in hand, TO YOU.', '\"Ain\'t No Mountain High Enough\" - Marvin Gaye and Tammi Terrell (or \"Ain\'t No Mountain High Enough\" - Diana Ross) Honestly, you don\'t have to be in love for this to be the perfect song for literally every occasion, but yes, that is Renee Zellwegger running towards you through the snow. Go to her.']},
     {qid : '17', question : 'How enthusiastic are you about playing the interactive video game Rock Band with your pals?' , answers : ['lol it\'s not 2008', 'Maybe I would do one song?', 'I like to sing', 'give me Rock Band or give me death!!!!']},
-    {qid : '18', question : 'What is your dream date?' , answers : ['Ice skating in the park', 'Streaking in the park', 'Starting fires in the park', 'Waterboarding in the park']},
 ];
-
-//const NUM_QUESTIONS = 3;
 
 var questions_array =
     [
+        {qid : '0', question : 'What is your dream date?' , answers : ['Ice skating in the park', 'Streaking in the park', 'Starting fires in the park', 'Waterboarding in the park']},
         {qid : '1', question : 'Do you have lice?' , answers : ['Yes', 'No']},
         {qid : '2', question : 'Which pasta shape best describes your political affiliation?' , answers : ['Angel hair', 'Wagon wheels', 'Elbows', 'Bowties']},
         {qid : '3', question : 'How often do you floss?' , answers : ['Once in a lifetime', 'Three times everyday, no more, no less', 'Never, flossing is for the weak', 'Right before I go to the dentist']},
@@ -40,8 +39,7 @@ var questions_array =
         //{qid : '14', question : 'How do you shave?' , answers : ['Up then down', 'Down then up', 'Side to side', 'Inside then out']},
         //{qid : '15', question : 'What would you rather have stuck to your fingers?' , answers : ['Other people\'s fingers', 'Magnets', 'Knives', 'The souls of your enemies']},
         //{qid : '16', question : 'If you were to have just realized you were in love and that the love of your life was right there in front of you the whole time (probably performing and writing sketch comedy on your college campus) what song would be playing as you marched with purpose to go to them?' , answers : ['\"Signed, Sealed, Delivered (I\'m Yours)\" Tom Hanks is a PRINCE among men.', '\"It Must Have Been Love\" Richard Gere is climbin\' his way up that fire escape, umbrella and flowers in hand, TO YOU.', '\"Ain\'t No Mountain High Enough\" - Marvin Gaye and Tammi Terrell (or \"Ain\'t No Mountain High Enough\" - Diana Ross) Honestly, you don\'t have to be in love for this to be the perfect song for literally every occasion, but yes, that is Renee Zellwegger running towards you through the snow. Go to her.']},
-        //{qid : '17', question : 'How enthusiastic are you about playing the interactive video game Rock Band with your pals?' , answers : ['lol it\'s not 2008', 'Maybe I would do one song?', 'I like to sing', 'give me Rock Band or give me death!!!!']},
-        //{qid : '18', question : 'What is your dream date?' , answers : ['Ice skating in the park', 'Streaking in the park', 'Starting fires in the park', 'Waterboarding in the park']},
+        //{qid : '17', question : 'How enthusiastic are you about playing the interactive video game Rock Band with your pals?' , answers : ['lol it\'s not 2008', 'Maybe I would do one song?', 'I like to sing', 'give me Rock Band or give me death!!!!']}
     ];
 
 // initialize AngularJS
@@ -49,10 +47,20 @@ var quizApp = angular.module('quizApp', []);
 
 quizApp.controller('QuizCtrl', function ($scope) {
 
-    $scope.current_question = 1;
+    //$scope.current_question = 1;
     $scope.questions = questions_array;
     $scope.startQuiz = function() {
         $('.jumbotron').hide();
         $('.quiz-content').show();
-    }
+    };
+
+    $scope.nextQuestion = function(currentQuestionNumber) {
+        $('#question' + currentQuestionNumber).fadeOut();
+        $('#question' + (currentQuestionNumber + 1)).fadeIn();
+    };
+
+    $scope.previousQuestion = function(currentQuestionNumber) {
+        $('#question' + currentQuestionNumber).fadeOut();
+        $('#question' + (currentQuestionNumber - 1)).fadeIn();
+    };
 });

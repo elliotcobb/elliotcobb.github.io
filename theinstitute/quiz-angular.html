@@ -32,7 +32,7 @@
 </div>
 
 <div class="jumbotron">
-    <h1>Who's your spirit <br>Institute member?</h1>
+    <h1 class="color-effect">Who's your spirit <br>Institute member?</h1>
     <p><a class="start-quiz-button btn btn-primary btn-lg" href="" ng-click="startQuiz()" role="button">Take the Quiz</a></p>
 </div>
 
@@ -41,17 +41,17 @@
         <div class="question-box " ng-repeat="q in questions">
             <div class="question" id="question{{q.qid}}">
                 <div class="question-heading">
-                    <h3 class="question-title">{{q.question}}</h3>
+                    <h3 class="question-title color-effect">{{q.question}}</h3>
                 </div>
                 <div class="question-body" data-selected-answer="">
-                    <div class="radio answer img-rounded" ng-repeat="answer in q.answers track by $index" data-answer-num="{{$index + 1}}">
-                        <input class="answer-radio" type="radio" name="question{{q.qid}}" id="q{{q.qid}}a{{$index}}" value="{{$index + 1}}">
+                    <div class="radio answer img-rounded" ng-repeat="answer in q.answers" data-answer-num="{{$index}}">
+                        <input class="answer-radio" type="radio" name="question{{q.qid}}" id="q{{q.qid}}a{{$index}}" value="{{$index}}">
                         {{answer}}
                     </div>
                 </div>
             </div>
-            <!--<button class="btn btn-default prev-question" type="back"> < </button>-->
-            <!--<button class="btn btn-default next-question" type="next"> > </button>-->
+            <button class="btn btn-default prev-question" ng-click="previousQuestion($index)" ng-if="!$first"> < </button>
+            <button class="btn btn-default next-question" ng-click="nextQuestion($index)" ng-if="!$last"> > </button>
         </div>
 
         <button class="btn btn-default submit-quiz" type="submit">Submit</button>

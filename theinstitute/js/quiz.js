@@ -4,16 +4,14 @@
 
 const STORED_PEOPLE =
 [
+    {name : 'Elaine Bledsoe', answers : [0, 0, 0]},
     {name : 'Elliot Cobb', answers : [1, 1, 1]},
     {name : 'Jacob Barr', answers : [2, 2, 2]},
-    {name : 'Sam Zinn', answers : [3, 3, 3]},
-    {name : 'Elaine Bledsoe', answers : [4, 4, 4]}
+    {name : 'Sam Zinn', answers : [3, 3, 3]}
 ];
 
 const NUM_PEOPLE = 4;
 const NUM_QUESTIONS = 3;
-const Q_COLOR = 'rgba(10, 200, 10, 0.2)';
-const SELECTED_Q_COLOR = 'rgba(10, 10, 200, 0.2)'
 
 $('.submit-quiz').click( function( event ) {
     findMatch();
