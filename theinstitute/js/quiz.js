@@ -57,15 +57,6 @@ function getMatchIndex(userMatches) {
 }
 
 $(document).ready( function() {
-    //highlight answers to questions on mouseover
-    $('.question-body .answer')
-        .mouseenter( function() {
-            $(this).addClass('hover-answer');
-        })
-        .mouseleave( function () {
-            $(this).removeClass('hover-answer');
-        })
-    ;
 
     // highlight selected answers, un-highlight old selected answers
     $('.question-body .answer').click( function () {
@@ -73,15 +64,15 @@ $(document).ready( function() {
 
         var selectedAnswerNum = $(this).closest('.question-body').attr('data-selected-answer');
         if (selectedAnswerNum != "") {
-            $(this).closest('.question-body').find('div.answer[data-answer-num=' + selectedAnswerNum + ']').removeClass('chosen-answer');
+            $(this).closest('.question-body').find('div.answer[data-answer-num=' + selectedAnswerNum + ']').removeClass('chosenAnswer');
         }
 
         $(this).closest('.question-body').attr('data-selected-answer', $(this).attr('data-answer-num'));
-        $(this).addClass('chosen-answer');
+        $(this).addClass('chosenAnswer');
     });
 
     // scroll down window to only show jumbotron
-    $('.jumbotron').css('margin-bottom', $(window).height())
+    $('body').css('margin-bottom', $(window).height());
     setTimeout( function() {
         $(document).scrollTop($('.jumbotron').position().top);
     }, 40);

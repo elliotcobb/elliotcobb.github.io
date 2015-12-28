@@ -4,6 +4,7 @@
     padding-right: 20%;
     padding-bottom: 2%;
     padding-top: 2%;
+    display: none;
 }
 
 .panel {
@@ -16,20 +17,12 @@
     height: 100%;
 }
 
-.thumbnail {
-    width: 100%;
-    height: 100%;
-    display: inline-block;
-    background-size: cover;
-    background-image: url('../content/benMeyerson.jpg');
-}
-
 .color-effect {
     -webkit-animation-name: color-effect; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 16s; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 14s; /* Chrome, Safari, Opera */
     -webkit-animation-iteration-count: infinite; /* Chrome, Safari, Opera */
     animation-name: color-effect;
-    animation-duration: 16s;
+    animation-duration: 14s;
     animation-iteration-count: infinite;
 }
 
@@ -52,7 +45,6 @@
 .jumbotron {
     background-color: #ffffff;
     color: #19A45D;
-    margin-bottom: 800px;
 }
 
 .start-quiz-button {
@@ -67,10 +59,6 @@ a:hover.start-quiz-button {
     background-color: #332CA3;
 }
 
-.quiz-content {
-    display: none;
-}
-
 .question-heading {
     border-bottom: solid 1px #111111;
     text-align: center;
@@ -79,6 +67,10 @@ a:hover.start-quiz-button {
     margin-bottom: 10px;
     margin-top: 5%;
     color: #19A45D;
+}
+
+.question-wrapper {
+    display: none;
 }
 
 .answer {
@@ -92,12 +84,12 @@ a:hover.start-quiz-button {
     font-family: 'Arvo', serif;
 }
 
-.hover-answer {
+.hoverAnswer {
     background-color: #E95323;
     color: #ffffff;
 }
 
-.chosen-answer {
+.chosenAnswer {
     background-color: #332CA3;
     color: #ffffff;
 }

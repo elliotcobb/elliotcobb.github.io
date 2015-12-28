@@ -52,15 +52,16 @@ quizApp.controller('QuizCtrl', function ($scope) {
     $scope.startQuiz = function() {
         $('.jumbotron').hide();
         $('.quiz-content').show();
+        $('.quiz-content #question-wrapper0').show();
     };
 
     $scope.nextQuestion = function(currentQuestionNumber) {
-        $('#question' + currentQuestionNumber).fadeOut();
-        $('#question' + (currentQuestionNumber + 1)).fadeIn();
+        $('#question-wrapper' + currentQuestionNumber).fadeOut();
+        $('#question-wrapper' + (currentQuestionNumber + 1)).fadeIn();
     };
 
     $scope.previousQuestion = function(currentQuestionNumber) {
-        $('#question' + currentQuestionNumber).fadeOut();
-        $('#question' + (currentQuestionNumber - 1)).fadeIn();
+        $('#question-wrapper' + currentQuestionNumber).fadeOut();
+        $('#question-wrapper' + (currentQuestionNumber - 1)).fadeIn();
     };
 });
