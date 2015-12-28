@@ -34,13 +34,12 @@
 .shaded-headshot {
     filter: opacity(0.3);
     -webkit-filter: opacity(0.3);
-
 }
 
 .nametag {
     position: absolute;
-    bottom: 37%;
-    color: #666666;
+    bottom: 45%;
+    color: #E95323;
     margin-left: auto;
     margin-right: auto;
     left: 0;

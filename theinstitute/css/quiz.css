@@ -24,13 +24,19 @@
     background-image: url('../content/benMeyerson.jpg');
 }
 
-.answer {
-    color: #666666;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 200%;
-    font-family: 'Arvo', serif;
-    /*background-image: url('content/samZinn.jpg');*/
+.jumbotron {
+    background-color: #ffffff;
+    color: #19A45D;
+    margin-bottom: 800px;
+}
+
+.start-quiz-button {
+    margin-top: 100px;
+
+}
+
+.quiz-content {
+    display: none;
 }
 
 .question-heading {
@@ -46,21 +52,28 @@
     padding: 4px;
     padding-left: 10px;
     margin-top: 3px;
+    color: #666666;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 200%;
+    font-family: 'Arvo', serif;
 }
 
 .hover-answer {
-    background-color: rgba(10, 200, 10, 0.2);
+    background-color: #E95323;
+    color: #ffffff;
 }
 
 .chosen-answer {
-    background-color: rgba(10, 10, 200, 0.2);
+    background-color: #332CA3;
+    color: #ffffff;
 }
 
 .answer-radio {
     display: none;
 }
 
-/* windows narrower than 681px */
+/* windows wider than 681px */
 @media only screen
 and (max-width : 1000px)
 and (min-width : 681px) {

@@ -69,6 +69,7 @@ $(document).ready( function() {
         })
     ;
 
+    // highlight selected answers, un-highlight old selected answers
     $('.question-body .answer').click( function () {
         $(this).find('input.answer-radio').prop("checked", true);
 
@@ -81,7 +82,10 @@ $(document).ready( function() {
         $(this).addClass('chosen-answer');
     });
 
-    $('input.answer-radio').on('change', function() {
-       console.log('moochie');
-    });
+    // scroll down window to only show jumbotron
+    $('.jumbotron').css('margin-bottom', $(window).height())
+    setTimeout( function() {
+        $(document).scrollTop($('.jumbotron').position().top);
+    }, 40);
+
 });

@@ -51,4 +51,8 @@ quizApp.controller('QuizCtrl', function ($scope) {
 
     $scope.current_question = 1;
     $scope.questions = questions_array;
+    $scope.startQuiz = function() {
+        $('.jumbotron').hide();
+        $('.quiz-content').show();
+    }
 });

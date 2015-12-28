@@ -27,10 +27,14 @@ a.svglink:after {
 }
 
 h1 {
-    color: #111;
+    color: #E95323;
     text-align: center;
     font-size: 360%;
     font-family: 'Arvo', serif;
+}
+
+.small-header {
+    color: #332CA3;
 }
 
 p {
@@ -41,6 +45,23 @@ p {
 .nav-pills {
     display: inline-block;
     margin-bottom: 10px;
+    font-family: 'Arvo', serif;
+}
+
+.pill-nav {
+    background-color: #ffffff;
+    color: #332CA3;
+}
+
+.nav-pills > li.active > .pill-nav {
+    background-color: #332CA3;
+    color: #ffffff;
+}
+
+.nav-pills > li.active > a:hover {
+    background-color: #332CA3;
+    opacity: 0.8;
+    color: #ffffff;
 }
 
 .pills .active a,
