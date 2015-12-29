@@ -42,19 +42,20 @@ var questionsArray =
         //{qid : '17', question : 'How enthusiastic are you about playing the interactive video game Rock Band with your pals?' , answers : ['lol it\'s not 2008', 'Maybe I would do one song?', 'I like to sing', 'give me Rock Band or give me death!!!!']}
     ];
 
+var INSTITUTE_PEOPLE =
+    [
+        {name : 'Elaine Bledsoe', answers : [0, 0, 0]},
+        {name : 'Elliot Cobb', answers : [1, 1, 1]},
+        {name : 'Jacob Barr', answers : [2, 2, 2]},
+        {name : 'Sam Zinn', answers : [3, 3, 3]}
+    ];
+
 // initialize AngularJS
 var quizApp = angular.module('quizApp', []);
 
 quizApp.controller('QuizCtrl', function ($scope) {
 
-    $scope.STORED_PEOPLE =
-        [
-            {name : 'Elaine Bledsoe', answers : [0, 0, 0]},
-            {name : 'Elliot Cobb', answers : [1, 1, 1]},
-            {name : 'Jacob Barr', answers : [2, 2, 2]},
-            {name : 'Sam Zinn', answers : [3, 3, 3]}
-        ];
-
+    $scope.INSTITUTE_PEOPLE = INSTITUTE_PEOPLE;
     $scope.questions = questionsArray;
     $scope.answers = new Array();
     $scope.question = "";
@@ -65,9 +66,12 @@ quizApp.controller('QuizCtrl', function ($scope) {
 
     $scope.userAnswers = new Array();
 
+
+
+    // TODO animate changing between questions so we can see blue highlighting
+
+
     $scope.startQuiz = function() {
-        //$('.jumbotron').hide();
-        //$('.quiz-content').show();
         $scope.getQuestion();
     };
 
@@ -103,7 +107,7 @@ quizApp.controller('QuizCtrl', function ($scope) {
         var yourMatch = "";
         for (var i = 0; i < matchIndexArray.length; i++) {
             yourMatch += "\n";
-            yourMatch += $scope.STORED_PEOPLE[matchIndexArray[i]].name;
+            yourMatch += $scope.INSTITUTE_PEOPLE[matchIndexArray[i]].name;
         }
 
         return yourMatch;
@@ -117,7 +121,7 @@ quizApp.controller('QuizCtrl', function ($scope) {
         for (var i = 0; i < $scope.NUM_PEOPLE; i++) {
             for (var j = 0; j < $scope.NUM_QUESTIONS; j++) {
 
-                if ($scope.STORED_PEOPLE[i].answers[j] == userAnswers[j]) {
+                if ($scope.INSTITUTE_PEOPLE[i].answers[j] == userAnswers[j]) {
                     userMatches[i]++;
                 }
             }
