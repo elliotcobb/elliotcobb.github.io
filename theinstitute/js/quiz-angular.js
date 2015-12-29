@@ -24,8 +24,8 @@ var questions_array =
     [
         {qid : '0', question : 'What is your dream date?' , answers : ['Ice skating in the park', 'Streaking in the park', 'Starting fires in the park', 'Waterboarding in the park']},
         {qid : '1', question : 'Do you have lice?' , answers : ['Yes', 'No']},
-        {qid : '2', question : 'Which pasta shape best describes your political affiliation?' , answers : ['Angel hair', 'Wagon wheels', 'Elbows', 'Bowties']},
-        {qid : '3', question : 'How often do you floss?' , answers : ['Once in a lifetime', 'Three times everyday, no more, no less', 'Never, flossing is for the weak', 'Right before I go to the dentist']},
+        {qid : '2', question : 'Which pasta shape best describes your political affiliation?' , answers : ['Angel hair', 'Wagon wheels', 'Elbows', 'Bowties']}
+        //{qid : '3', question : 'How often do you floss?' , answers : ['Once in a lifetime', 'Three times everyday, no more, no less', 'Never, flossing is for the weak', 'Right before I go to the dentist']},
         //{qid : '4', question : 'What is your favorite substitute for a swear word? ' , answers : ['Dangit', 'Muffins', 'Poop', 'Fudge']},
         //{qid : '5', question : 'What do you do at the zoo?' , answers : ['Go to all the animals and use silly voices to pretend like you are that animal.  Narrate what they think and do.', 'Lure the spider monkeys to the fence and then when they get close enough reach through and touch them.', 'Hop the fence of the Mexican Grey Wolves and submit to the alpha, hoping he will allow you into the wolf pack.  The Alpha does let you in because he sees you understand how the pack operates and also you have the courage of a wolf.  The alpha teaches you to hunt with the ancient stealth of wolves of millennium past.  You both bay at the moon each night, a call to your ancestors.  AWHOOOOO.', 'Release all the animals because you can\'t own nature, man.  Zoos are the incarnation of human greed and their assumed but BACKWARD dominion of the natural world.  But you\'ll show them who\'s in charge when the majestic snow leopards devour the zoo workers, then flee into the Massachusetts woods. ']},
         //{qid : '6', question : 'What is your ideal date?' , answers : ['Friday the 13th', 'A romantic candlelit dinner which you awkwardly split the bill for', 'An overly intellectual conversation over coffee', 'Flip cup in a fraternity basement']},
@@ -47,21 +47,99 @@ var quizApp = angular.module('quizApp', []);
 
 quizApp.controller('QuizCtrl', function ($scope) {
 
-    //$scope.current_question = 1;
     $scope.questions = questions_array;
     $scope.startQuiz = function() {
         $('.jumbotron').hide();
         $('.quiz-content').show();
-        $('.quiz-content #question-wrapper0').show();
+        this.getQuestion();
     };
 
-    $scope.nextQuestion = function(currentQuestionNumber) {
-        $('#question-wrapper' + currentQuestionNumber).fadeOut();
-        $('#question-wrapper' + (currentQuestionNumber + 1)).fadeIn();
+    $scope.nextQuestion = function(questionNumber) {
+        if (questionNumber < (this.NUM_QUESTIONS - 1)) {
+            $('#question-wrapper' + questionNumber).fadeOut();
+            $('#question-wrapper' + (questionNumber + 1)).fadeIn();
+        } else {
+            //submitQuiz();
+            console.log('called submit quiz from angular');
+            console.log(this);
+        }
     };
 
-    $scope.previousQuestion = function(currentQuestionNumber) {
-        $('#question-wrapper' + currentQuestionNumber).fadeOut();
-        $('#question-wrapper' + (currentQuestionNumber - 1)).fadeIn();
+    $scope.STORED_PEOPLE =
+        [
+            {name : 'Elaine Bledsoe', answers : [0, 0, 0]},
+            {name : 'Elliot Cobb', answers : [1, 1, 1]},
+            {name : 'Jacob Barr', answers : [2, 2, 2]},
+            {name : 'Sam Zinn', answers : [3, 3, 3]}
+        ];
+
+    $scope.currentQuestionNum = 0;
+    $scope.question = "";
+    $scope.answers = new Array();
+
+    $scope.NUM_PEOPLE = 4;
+    $scope.NUM_QUESTIONS = 3;
+
+    $scope.userAnswers = new Array();
+
+    $scope.submitAnswer = function(answerNumber) {
+        this.userAnswers.push(answerNumber);
+        this.currentQuestionNum++;
+        this.getQuestion();
+    };
+
+    $scope.getQuestion = function() {
+        this.question = this.questions[this.currentQuestionNum].question;
+        this.answers = this.questions[this.currentQuestionNum].answers;
+    };
+
+
+
+    $scope.submitQuiz = function() {
+
+        this.findMatch();
+    };
+
+    $scope.findMatch = function() {
+
+        this.userAnswers = $('form.quiz-form').serializeArray();
+        var userMatches = this.countAnswerMatches(this.userAnswers);
+        var matchIndexArray = this.getMatchIndex(userMatches);
+
+        // output match content.
+        // congrats, you're a ____ !
+        console.log("your matches are:");
+        for (var i = 0; i < matchIndexArray.length; i++) {
+            console.log(STORED_PEOPLE[matchIndexArray[i]].name);
+        }
+    };
+
+    $scope.countAnswerMatches = function(userAnswers) {
+
+        // creates zero-filled array of length NUM_PEOPLE
+        var userMatches = Array.apply(null, Array(NUM_PEOPLE)).map(Number.prototype.valueOf,0);
+
+        for (var i = 0; i < NUM_PEOPLE; i++) {
+            for (var j = 0; j < NUM_QUESTIONS; j++) {
+
+                if (STORED_PEOPLE[i].answers[j] == userAnswers[j].value) {
+                    userMatches[i]++;
+                }
+            }
+        }
+        return userMatches;
+    };
+
+    $scope.getMatchIndex = function(userMatches) {
+        var max = Math.max.apply(null, userMatches);
+        var matchIndexArray = new Array();
+        for (var i = 0; i < NUM_PEOPLE; i++) {
+            if (userMatches[i] == max) {
+                matchIndexArray.push(i);
+            }
+        }
+        return matchIndexArray;
     };
 });
+
+

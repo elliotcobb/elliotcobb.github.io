@@ -38,25 +38,24 @@
 
 <div class="quiz-content">
     <form class="quiz-form">
-        <div class="question-wrapper" id="question-wrapper{{$index}}" ng-repeat="q in questions">
-            <div class="question" id="question{{$index}}">
+        <div class="question-wrapper">
+            <div class="question">
                 <div class="question-heading">
-                    <h3 class="question-title color-effect">{{q.question}}</h3>
+                    <h3 class="question-title color-effect">{{question}}</h3>
                 </div>
                 <div class="question-body" data-selected-answer="">
                     <div class="answer img-rounded" data-answer-num="{{$index}}"
-                         ng-repeat="answer in q.answers"
-                         ng-class="{hoverAnswer: hover}"
-                         ng-mouseenter="hover = true"
-                         ng-mouseleave="hover = false">
+                        ng-repeat="answer in answers"
+                        ng-class="{hoverAnswer: hover, chosenAnswer: click}"
+                        ng-mouseenter="hover = true"
+                        ng-mouseleave="hover = false"
+                        ng-click="click = true; submitAnswer($index)">
 
                         <input class="answer-radio" type="radio" name="question{{q.qid}}" id="q{{q.qid}}a{{$index}}" value="{{$index}}">
                         {{answer}}
                     </div>
                 </div>
             </div>
-            <button class="btn btn-default prev-question" ng-click="previousQuestion($index)" ng-if="!$first"> < </button>
-            <button class="btn btn-default next-question" ng-click="nextQuestion($index)" ng-if="!$last"> > </button>
             <button class="btn btn-default submit-quiz" ng-if="$last" type="submit">Submit</button>
         </div>
     </form>

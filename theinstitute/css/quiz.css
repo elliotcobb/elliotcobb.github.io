@@ -4,7 +4,7 @@
     padding-right: 20%;
     padding-bottom: 2%;
     padding-top: 2%;
-    display: none;
+    /*display: none;*/
 }
 
 .panel {
@@ -69,9 +69,9 @@ a:hover.start-quiz-button {
     color: #19A45D;
 }
 
-.question-wrapper {
-    display: none;
-}
+
+/*fourth color in pallete ---> #E9BB23*/
+
 
 .answer {
     padding: 4px;
