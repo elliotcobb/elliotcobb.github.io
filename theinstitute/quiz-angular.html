@@ -31,12 +31,12 @@
     </ul>
 </div>
 
-<div class="jumbotron">
+<div class="jumbotron" ng-hide="startQuizClick">
     <h1 class="color-effect">Who's your spirit <br>Institute member?</h1>
-    <p><a class="start-quiz-button btn btn-primary btn-lg" href="" ng-click="startQuiz()" role="button">Take the Quiz</a></p>
+    <p><a class="start-quiz-button btn btn-primary btn-lg" href="" ng-click="startQuizClick = true; startQuiz()" role="button">Take the Quiz</a></p>
 </div>
 
-<div class="quiz-content">
+<div class="quiz-content" ng-show="startQuizClick">
     <form class="quiz-form">
         <div class="question-wrapper">
             <div class="question">
@@ -44,14 +44,13 @@
                     <h3 class="question-title color-effect">{{question}}</h3>
                 </div>
                 <div class="question-body" data-selected-answer="">
-                    <div class="answer img-rounded" data-answer-num="{{$index}}"
+                    <div class="answer img-rounded"
                         ng-repeat="answer in answers"
                         ng-class="{hoverAnswer: hover, chosenAnswer: click}"
                         ng-mouseenter="hover = true"
                         ng-mouseleave="hover = false"
                         ng-click="click = true; submitAnswer($index)">
 
-                        <input class="answer-radio" type="radio" name="question{{q.qid}}" id="q{{q.qid}}a{{$index}}" value="{{$index}}">
                         {{answer}}
                     </div>
                 </div>

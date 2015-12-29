@@ -20,7 +20,7 @@ const QUESTIONS_DB =
     {qid : '17', question : 'How enthusiastic are you about playing the interactive video game Rock Band with your pals?' , answers : ['lol it\'s not 2008', 'Maybe I would do one song?', 'I like to sing', 'give me Rock Band or give me death!!!!']},
 ];
 
-var questions_array =
+var questionsArray =
     [
         {qid : '0', question : 'What is your dream date?' , answers : ['Ice skating in the park', 'Streaking in the park', 'Starting fires in the park', 'Waterboarding in the park']},
         {qid : '1', question : 'Do you have lice?' , answers : ['Yes', 'No']},
@@ -47,24 +47,6 @@ var quizApp = angular.module('quizApp', []);
 
 quizApp.controller('QuizCtrl', function ($scope) {
 
-    $scope.questions = questions_array;
-    $scope.startQuiz = function() {
-        $('.jumbotron').hide();
-        $('.quiz-content').show();
-        this.getQuestion();
-    };
-
-    $scope.nextQuestion = function(questionNumber) {
-        if (questionNumber < (this.NUM_QUESTIONS - 1)) {
-            $('#question-wrapper' + questionNumber).fadeOut();
-            $('#question-wrapper' + (questionNumber + 1)).fadeIn();
-        } else {
-            //submitQuiz();
-            console.log('called submit quiz from angular');
-            console.log(this);
-        }
-    };
-
     $scope.STORED_PEOPLE =
         [
             {name : 'Elaine Bledsoe', answers : [0, 0, 0]},
@@ -73,56 +55,69 @@ quizApp.controller('QuizCtrl', function ($scope) {
             {name : 'Sam Zinn', answers : [3, 3, 3]}
         ];
 
-    $scope.currentQuestionNum = 0;
-    $scope.question = "";
+    $scope.questions = questionsArray;
     $scope.answers = new Array();
+    $scope.question = "";
 
+    $scope.currentQuestionNum = 0;
     $scope.NUM_PEOPLE = 4;
     $scope.NUM_QUESTIONS = 3;
 
     $scope.userAnswers = new Array();
 
+    $scope.startQuiz = function() {
+        //$('.jumbotron').hide();
+        //$('.quiz-content').show();
+        $scope.getQuestion();
+    };
+
     $scope.submitAnswer = function(answerNumber) {
-        this.userAnswers.push(answerNumber);
-        this.currentQuestionNum++;
-        this.getQuestion();
+        $scope.userAnswers.push(answerNumber);
+        $scope.currentQuestionNum++;
+        if ($scope.currentQuestionNum < $scope.NUM_QUESTIONS) {
+            $scope.getQuestion();
+        } else {
+            $scope.submitQuiz();
+        }
     };
 
     $scope.getQuestion = function() {
-        this.question = this.questions[this.currentQuestionNum].question;
-        this.answers = this.questions[this.currentQuestionNum].answers;
+        $scope.question = $scope.questions[$scope.currentQuestionNum].question;
+        $scope.answers = $scope.questions[$scope.currentQuestionNum].answers;
     };
 
-
-
     $scope.submitQuiz = function() {
-
-        this.findMatch();
+        var yourMatch = $scope.findMatch();
+        console.log("your match is:");
+        console.log(yourMatch);
     };
 
     $scope.findMatch = function() {
 
-        this.userAnswers = $('form.quiz-form').serializeArray();
-        var userMatches = this.countAnswerMatches(this.userAnswers);
-        var matchIndexArray = this.getMatchIndex(userMatches);
+        //$scope.userAnswers = $('form.quiz-form').serializeArray();
+        var userMatches = $scope.countAnswerMatches($scope.userAnswers);
+        var matchIndexArray = $scope.getMatchIndex(userMatches);
 
         // output match content.
         // congrats, you're a ____ !
-        console.log("your matches are:");
+        var yourMatch = "";
         for (var i = 0; i < matchIndexArray.length; i++) {
-            console.log(STORED_PEOPLE[matchIndexArray[i]].name);
+            yourMatch += "\n";
+            yourMatch += $scope.STORED_PEOPLE[matchIndexArray[i]].name;
         }
+
+        return yourMatch;
     };
 
     $scope.countAnswerMatches = function(userAnswers) {
 
         // creates zero-filled array of length NUM_PEOPLE
-        var userMatches = Array.apply(null, Array(NUM_PEOPLE)).map(Number.prototype.valueOf,0);
+        var userMatches = Array.apply(null, Array($scope.NUM_PEOPLE)).map(Number.prototype.valueOf,0);
 
-        for (var i = 0; i < NUM_PEOPLE; i++) {
-            for (var j = 0; j < NUM_QUESTIONS; j++) {
+        for (var i = 0; i < $scope.NUM_PEOPLE; i++) {
+            for (var j = 0; j < $scope.NUM_QUESTIONS; j++) {
 
-                if (STORED_PEOPLE[i].answers[j] == userAnswers[j].value) {
+                if ($scope.STORED_PEOPLE[i].answers[j] == userAnswers[j]) {
                     userMatches[i]++;
                 }
             }
@@ -133,7 +128,7 @@ quizApp.controller('QuizCtrl', function ($scope) {
     $scope.getMatchIndex = function(userMatches) {
         var max = Math.max.apply(null, userMatches);
         var matchIndexArray = new Array();
-        for (var i = 0; i < NUM_PEOPLE; i++) {
+        for (var i = 0; i < $scope.NUM_PEOPLE; i++) {
             if (userMatches[i] == max) {
                 matchIndexArray.push(i);
             }
