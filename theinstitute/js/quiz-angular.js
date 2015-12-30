@@ -65,25 +65,44 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout) {
     $scope.NUM_QUESTIONS = 3;
 
     $scope.userAnswers = new Array();
+    $scope.yourMatch = "";
 
 
-
-    // TODO animate changing between questions so we can see blue highlighting
 
 
     $scope.startQuiz = function() {
+        $scope.preQuiz = false;
+        $scope.quizInProgress = true;
+        $scope.fadeInQuestion = true;
+        $scope.resetFadeEffects();
         $scope.getQuestion();
+    };
+
+    $scope.nextQuestion = function(answerNumber) {
+        $scope.fadeOutQuestion = true;
+        $scope.submitAnswer(answerNumber);
+
+        // wait for previous question to fade out before changing the model
+        $timeout( function() {
+            if ($scope.isEndOfQuiz()) {
+                $scope.quizInProgress = false;
+                $scope.postQuiz = true;
+                $scope.submitQuiz();
+            } else {
+                    $scope.getQuestion();
+                    $scope.fadeInQuestion = true;
+                    $scope.resetFadeEffects();
+            }
+        }, 1000);
+    };
+
+    $scope.isEndOfQuiz = function() {
+        return $scope.currentQuestionNum >= $scope.NUM_QUESTIONS;
     };
 
     $scope.submitAnswer = function(answerNumber) {
         $scope.userAnswers.push(answerNumber);
         $scope.currentQuestionNum++;
-
-        if ($scope.currentQuestionNum < $scope.NUM_QUESTIONS) {
-            //$scope.getQuestion();
-        } else {
-            $scope.submitQuiz();
-        }
     };
 
     $scope.getQuestion = function() {
@@ -92,16 +111,16 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout) {
     };
 
     $scope.submitQuiz = function() {
-        var yourMatch = $scope.findMatch();
+        $scope.yourMatch = $scope.findMatch();
         console.log("your match is:");
-        console.log(yourMatch);
+        console.log($scope.yourMatch);
     };
 
-    $scope.fadeOutQuestion = function() {
-        $scope.fadeQuestion = true;
-        $timeout(function(){
-            $scope.hideQuestion = true;
-        }, 2000);
+    $scope.resetFadeEffects = function() {
+        $timeout( function() {
+            $scope.fadeInQuestion = false;
+            $scope.fadeOutQuestion = false;
+        }, 1000);
     };
 
     $scope.findMatch = function() {
