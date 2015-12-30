@@ -31,7 +31,7 @@
     </ul>
 </div>
 
-<div class="jumbotron" ng-show="preQuiz" ng-hide="!preQuiz" ng-init="preQuiz = true;">
+<div class="jumbotron" ng-show="currentQuizStage == 0" ng-hide="currentQuizStage != 0">
     <h1 class="color-effect">Who's your spirit <br>Institute member?</h1>
     <p><a class="start-quiz-button btn btn-primary btn-lg"
           href=""
@@ -39,7 +39,7 @@
           role="button">Take the Quiz</a></p>
 </div>
 
-<div class="quiz-content" ng-show="quizInProgress" ng-hide="!quizInProgress" ng-init="quizInProgress = false;">
+<div class="quiz-content" ng-show="currentQuizStage == 1" ng-hide="currentQuizStage != 1">
     <div class="question"
          ng-init="fadeInQuestion = false; fadeOutQuestion = false"
          ng-class="{fadeOut: fadeOutQuestion, fadeIn: fadeInQuestion}">
@@ -61,8 +61,9 @@
     </div>
 </div>
 
-<div class="match-content" ng-show="postQuiz" ng-hide="!postQuiz" ng-init="postQuiz = false;">
-    Youre a {{yourMatch}}!
+<div class="match-content" ng-show="currentQuizStage == 2" ng-hide="currentQuizStage != 2">
+    You Got: {{yourMatch}}
+
 </div>
 
 <script src="js/quiz.js" type="text/javascript"></script>
