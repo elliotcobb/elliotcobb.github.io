@@ -53,7 +53,7 @@ var INSTITUTE_PEOPLE =
 // initialize AngularJS
 var quizApp = angular.module('quizApp', []);
 
-quizApp.controller('QuizCtrl', function ($scope) {
+quizApp.controller('QuizCtrl', function ($scope, $timeout) {
 
     $scope.INSTITUTE_PEOPLE = INSTITUTE_PEOPLE;
     $scope.questions = questionsArray;
@@ -78,8 +78,9 @@ quizApp.controller('QuizCtrl', function ($scope) {
     $scope.submitAnswer = function(answerNumber) {
         $scope.userAnswers.push(answerNumber);
         $scope.currentQuestionNum++;
+
         if ($scope.currentQuestionNum < $scope.NUM_QUESTIONS) {
-            $scope.getQuestion();
+            //$scope.getQuestion();
         } else {
             $scope.submitQuiz();
         }
@@ -94,6 +95,13 @@ quizApp.controller('QuizCtrl', function ($scope) {
         var yourMatch = $scope.findMatch();
         console.log("your match is:");
         console.log(yourMatch);
+    };
+
+    $scope.fadeOutQuestion = function() {
+        $scope.fadeQuestion = true;
+        $timeout(function(){
+            $scope.hideQuestion = true;
+        }, 2000);
     };
 
     $scope.findMatch = function() {

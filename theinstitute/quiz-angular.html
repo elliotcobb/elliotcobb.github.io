@@ -38,7 +38,7 @@
 
 <div class="quiz-content" ng-show="startQuizClick">
     <form class="quiz-form">
-        <div class="question-wrapper">
+        <div class="question-wrapper" ng-hide="hideQuestion" ng-show="showQuestion" ng-class="{fadeOut: fadeQuestion}">
             <div class="question">
                 <div class="question-heading">
                     <h3 class="question-title color-effect">{{question}}</h3>
@@ -49,8 +49,7 @@
                         ng-class="{hoverAnswer: hover, chosenAnswer: click}"
                         ng-mouseenter="hover = true"
                         ng-mouseleave="hover = false"
-                        ng-click="click = true; submitAnswer($index)">
-
+                        ng-click="click = true; fadeOutQuestion(); submitAnswer($index)">
                         {{answer}}
                     </div>
                 </div>
