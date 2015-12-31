@@ -29,18 +29,18 @@
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes color-effect {
-    0%   {color: #19A45D;}
-    33%  {color: #E95323;}
-    66%  {color: #332CA3;}
-    100% {color: #19A45D;}
+    0%   {color: #19A45D; border-color: #19A45D;}
+    33%  {color: #E95323; border-color: #E95323;}
+    66%  {color: #332CA3; border-color: #332CA3;}
+    100% {color: #19A45D; border-color: #19A45D;}
 }
 
 /* Standard syntax */
 @keyframes color-effect {
-    0%   {color: #19A45D;}
-    33%  {color: #E95323;}
-    66%  {color: #332CA3;}
-    100% {color: #19A45D;}
+    0%   {color: #19A45D; border-color: #19A45D;}
+    33%  {color: #E95323; border-color: #E95323;}
+    66%  {color: #332CA3; border-color: #332CA3;}
+    100% {color: #19A45D; border-color: #19A45D;}
 }
 
 /******************* Fade Out Effect **************************/
@@ -104,8 +104,7 @@
 }
 
 a:hover.start-quiz-button {
-    color: #ffffff;
-    background-color: #332CA3;
+    background-color: #eeeeee;
 }
 
 .question-heading {
@@ -176,22 +175,20 @@ a:hover.start-quiz-button {
 
 .retakeQuiz {
     width: 100%;
+    color: #19A45D;
+    border: solid 1px #19A45D;
+    background-color: #ffffff;
 }
 
-/* windows wider than 681px */
-/*@media only screen*/
-/*and (max-width : 1000px)*/
-/*and (min-width : 681px) {*/
-    /*.quiz-content {*/
-        /*padding-left: 10%;*/
-        /*padding-right: 10%;*/
-    /*}*/
+a:hover.retakeQuiz {
+    background-color: #eeeeee;
+}
 
-    /*.matchContent {*/
-        /*padding-left: 10%;*/
-        /*padding-right: 10%;*/
-    /*}*/
-/*}*/
+.emptyDiv {
+    visibility: hidden;
+    width: 100%;
+    height: 2000px;
+}
 
 /* windows narrower than 681px */
 @media only screen

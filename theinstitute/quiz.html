@@ -11,7 +11,7 @@
     <script src="js/quiz.js" type="text/javascript"></script>
 
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="css/basic.css">
+    <link rel="stylesheet" type="text/css" href="css/header.css">
     <link rel="stylesheet" type="text/css" href="css/quiz.css">
 
     <title>The Institute Sketch Comedy</title>
@@ -26,14 +26,14 @@
     <ul class="nav nav-pills pills">
         <li role="presentation"><a class="pill-nav the-team" href="index.html">The Team</a></li>
         <li role="presentation"><a class="pill-nav videos" href="videos.html">Videos</a></li>
-        <li role="presentation" class="active"><a class="pill-nav quiz" href="">Quiz</a></li>
+        <li role="presentation" class="active"><a class="pill-nav quiz" href="quiz.html">Quiz</a></li>
         <li role="presentation"><a class="pill-nav about" href="about.html">About</a></li>
     </ul>
 </div>
 
-<div class="jumbotron" ng-show="currentQuizStep == 0" ng-hide="currentQuizStep != 0" ng-init="currentQuizStep = 2">
+<div class="jumbotron" ng-show="currentQuizStep == 0" ng-hide="currentQuizStep != 0" ng-init="currentQuizStep = 0">
     <h1 class="color-effect">Who's your spirit <br>Institute member?</h1>
-    <p><a class="start-quiz-button btn btn-primary btn-lg"
+    <p><a class="start-quiz-button btn btn-primary btn-lg color-effect"
           href=""
           ng-click="quizInProgress = true; startQuiz()"
           role="button">Take the Quiz</a></p>
@@ -62,15 +62,17 @@
 
 <div class="matchContent" ng-show="currentQuizStep == 2" ng-hide="currentQuizStep != 2">
     You got...
-    <div class="matchName">
+    <div class="matchName color-effect">
         {{yourMatch.name}}
     </div>
     <img class="matchImg img-circle" src="{{yourMatch.img}}" alt="stunning portrait of your special match">
     <div class="matchBio">
         {{yourMatch.bio}}
     </div>
-    <button class="btn btn-default retakeQuiz" ng-click="currentQuestionNum = 0; currentQuizStep = 0; startQuiz()">Retake Quiz</button>
+    <a class="btn btn-default retakeQuiz color-effect" role="button" ng-click="currentQuestionNum = 0; currentQuizStep = 0; startQuiz()">Retake Quiz</a>
 </div>
+
+<div class="emptyDiv"></div>
 
 </body>
 </html>
