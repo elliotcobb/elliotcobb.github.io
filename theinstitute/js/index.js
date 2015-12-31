@@ -17,7 +17,6 @@ $('.the-team-content-holder .thumbnail')
 ;
 
 $('.the-team-content-holder .thumbnail').click(function() {
-    console.log("click");
     var bio = $(this).find('.headshot-bio');
     if (bio.css('display') == 'none') {
         // show
@@ -49,8 +48,6 @@ function removeAppendSortedThumbs(thumbArray) {
         $('.thumbColumn[data-randID=' + thumbArray[i] + ']').appendTo('.the-team-content');
     }
 };
-
-
 
 $(document).ready( function() {
     shuffleThumbs();
