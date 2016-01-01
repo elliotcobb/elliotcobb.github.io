@@ -16,7 +16,7 @@ const QUESTIONS_DB =
         {qid : '13', question : 'When you get a little schwasty, what\'s your language of choice?' , answers : ['Interpretive dance', 'Murican', 'Français (franglais variation included)', 'The language of the hill folk']},
         {qid : '14', question : 'How do you shave?' , answers : ['Up then down', 'Down then up', 'Side to side', 'Inside then out']},
         {qid : '15', question : 'What would you rather have stuck to your fingers?' , answers : ['Other people\'s fingers', 'Magnets', 'Knives', 'The souls of your enemies']},
-        {qid : '16', question : 'If you were to have just realized you were in love and that the love of your life was right there in front of you the whole time (probably performing and writing sketch comedy on your college campus) what song would be playing as you marched with purpose to go to them?' , answers : ['\"Signed, Sealed, Delivered (I\'m Yours)\" Tom Hanks is a PRINCE among men.', '\"It Must Have Been Love\" Richard Gere is climbin\' his way up that fire escape, umbrella and flowers in hand, TO YOU.', '\"Ain\'t No Mountain High Enough\" - Marvin Gaye and Tammi Terrell (or \"Ain\'t No Mountain High Enough\" - Diana Ross) Honestly, you don\'t have to be in love for this to be the perfect song for literally every occasion, but yes, that is Renee Zellwegger running towards you through the snow. Go to her.']},
+        {qid : '16', question : 'If you were to have just realized you were in love and that the love of your life was right there in front of you the whole time what song would be playing as you marched with purpose to go to them?' , answers : ['\"Signed, Sealed, Delivered (I\'m Yours)\" Tom Hanks is a PRINCE among men.', '\"It Must Have Been Love\" Richard Gere is climbin\' his way up that fire escape, umbrella and flowers in hand, TO YOU.', '\"Ain\'t No Mountain High Enough\" - Marvin Gaye and Tammi Terrell. Renee Zellwegger is running towards you through the snow. Go to her.']},
         {qid : '17', question : 'How enthusiastic are you about playing the interactive video game Rock Band with your pals?' , answers : ['lol it\'s not 2008', 'Maybe I would do one song?', 'I like to sing', 'give me Rock Band or give me death!!!!']}
     ];
 
@@ -49,7 +49,6 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
     $scope.QUESTIONS_DB = QUESTIONS_DB;
     $scope.questions = new Array();
     $scope.questionsOrder = new Array();
-    $scope.answers = new Array();
     $scope.questionObject = "";
 
     $scope.currentQuizStep = 0;
@@ -58,11 +57,33 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
     $scope.NUM_QUESTIONS_PER_QUIZ = 9;
     $scope.NUM_TOTAL_QUESTIONS = 18;
 
-    $scope.userAnswers = [-1, -1, -1, -1, -1, -1, -1, -1, -1];
+    $scope.INIT_USER_ANSWERS = [-1, -1, -1, -1, -1, -1, -1, -1, -1];
+    $scope.userAnswers = $scope.INIT_USER_ANSWERS;
     $scope.yourMatch = { name : "Institute Mom", img : "" , answers : [], bio : "Im ur mom"};
     $scope.yourMatch = {name : 'Ben Meyerson',  img : "content/benMeyerson.jpg", answers : [3, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], bio : "You're a Ben! Bens are an odd-toed ungulate mammal belonging to the taxonomic family Equidae. The horse has evolved over the past 45 to 55 million years from a small multi-toed creature, Hyracotherium, into the large, single-toed animal of today. Humans began to domesticate horses around 4000 BC, and their domestication is believed to have been widespread by 3000 BC. Horses in the subspecies caballus are domesticated, although some domesticated populations live in the wild as feral horses. These feral populations are not true wild horses, as this term is used to describe horses that have never been domesticated, such as the endangered Przewalski\'s horse, a separate subspecies, and the only remaining true wild horse. There is an extensive, specialized vocabulary used to describe equine-related concepts, covering everything from anatomy to life stages, size, colors, markings, breeds, locomotion, and behavior. Horses' anatomy enables them to make use of speed to escape predators and they have a well-developed sense of balance and a strong fight-or-flight response. Related to this need to flee from predators in the wild is an unusual trait: horses are able to sleep both standing up and lying down. Female horses, called mares, carry their young for approximately 11 months, and a young horse, called a foal, can stand and run shortly following birth. Most domesticated horses begin training under saddle or in harness between the ages of two and four. They reach full adult development by age five, and have an average lifespan of between 25 and 30 years. Horse breeds are loosely divided into three categories based on general temperament: spirited \"hot bloods\" with speed and endurance; \"cold bloods\", such as draft horses and some ponies, suitable for slow, heavy work; and \"warmbloods\", developed from crosses between hot bloods and cold bloods, often focusing on creating breeds for specific riding purposes, particularly in Europe. There are more than 300 breeds of horse in the world today, developed for many different uses. Horses and humans interact in a wide variety of sport competitions and non-competitive recreational pursuits, as well as in working activities such as police work, agriculture, entertainment, and therapy. Horses were historically used in warfare, from which a wide variety of riding and driving techniques developed, using many different styles of equipment and methods of control. Many products are derived from horses, including meat, milk, hide, hair, bone, and pharmaceuticals extracted from the urine of pregnant mares. Humans provide domesticated horses with food, water and shelter, as well as attention from specialists such as veterinarians and farriers."},
 
     $scope.scrollHeight = $('.header').position().top + $('.header').height();
+
+
+    // document ready function
+    angular.element(document).ready(function () {
+
+        $timeout( function() {
+            $scope.scrollToHeaderBottom();
+        }, 90);
+    });
+
+    $scope.scrollToHeaderBottom = function() {
+        $(document).scrollTop($scope.scrollHeight);
+    };
+
+    $scope.startQuiz = function() {
+        $scope.fillQuestionsArray();
+        $scope.currentQuizStep = 1;
+        $scope.fadeInQuestion = true;
+        $scope.resetFadeEffects();
+        $scope.getQuestion();
+    };
 
     $scope.fillQuestionsArray = function() {
         $scope.initQuestionsOrder();
@@ -76,29 +97,6 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
         console.log($scope.questions);
     };
 
-
-
-
-
-
-
-
-    // todo quiz not showing match page
-
-    // todo multiclick on question causes bug
-
-
-
-
-
-
-
-
-
-
-
-
-
     $scope.initQuestionsOrder = function() {
         for (var i = 0; i < $scope.NUM_TOTAL_QUESTIONS; i++) {
             $scope.questionsOrder.push(i);
@@ -109,19 +107,6 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
     $scope.shuffleArray = function(o) {
         for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
         return o;
-    };
-
-    $scope.scrollToHeaderBottom = function() {
-        $(document).scrollTop($scope.scrollHeight);
-    };
-
-    $scope.startQuiz = function() {
-        $scope.fillQuestionsArray();
-        $scope.currentQuizStep++;
-        //$scope.scrollToHeaderBottom();
-        $scope.fadeInQuestion = true;
-        $scope.resetFadeEffects();
-        $scope.getQuestion();
     };
 
     $scope.nextQuestion = function() {
@@ -138,7 +123,7 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
                 $scope.fadeInQuestion = true;
                 $scope.resetFadeEffects();
             }
-        }, 1000);
+        }, 900);
     };
 
     $scope.isEndOfQuiz = function() {
@@ -151,15 +136,31 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
         $scope.nextQuestion();
     };
 
+    // changes the model to show the current question
+    // currentQuestionNum is incremented before this call so that
+    // getQuestion() shows a new question
     $scope.getQuestion = function() {
         $scope.questionObject = $scope.questions[$scope.currentQuestionNum];
     };
 
+    // called after answering the last question
+    // sets yourMatch in the model which is displayed
     $scope.submitQuiz = function() {
         $scope.yourMatch = $scope.findMatch();
-        $scope.userAnswers = new Array();
+        $scope.resetQuizData();
     };
 
+    // sets neccesary data to init stages for when the
+    // "retake quiz" button is clicked
+    $scope.resetQuizData = function() {
+        $scope.userAnswers = $scope.INIT_USER_ANSWERS;
+        $scope.currentQuestionNum = 0;
+        $scope.questions = new Array();
+        $scope.questionsOrder = new Array();
+    };
+
+    // resets $scope.fadeInQuestion and $scope.fadeOutQuestion to false
+    // these trigger a question fadeOut or fadeIn when set to true
     $scope.resetFadeEffects = function() {
         $timeout( function() {
             $scope.fadeInQuestion = false;
@@ -167,9 +168,10 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
         }, 1000);
     };
 
+    // returns a person object from INSTITUTE_PEOPLE which
+    // includes a name, img filepath, bio, and answers
     $scope.findMatch = function() {
 
-        //$scope.userAnswers = $('form.quiz-form').serializeArray();
         var userMatches = $scope.countAnswerMatches($scope.userAnswers);
         var matchIndexArray = $scope.getMatchIndex(userMatches);
 
@@ -181,15 +183,21 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
         }
     };
 
+    // returns an array of length NUM_PEOPLE
+    // each element of the array has an int signifying the number of matches
+    // the user shared with that person
     $scope.countAnswerMatches = function(userAnswers) {
 
         // creates zero-filled array of length NUM_PEOPLE
         var userMatches = Array.apply(null, Array($scope.NUM_PEOPLE)).map(Number.prototype.valueOf,0);
 
         for (var i = 0; i < $scope.NUM_PEOPLE; i++) {
-            for (var j = 0; j < $scope.NUM_TOTAL_QUESTIONS; j++) {
+            for (var j = 0; j < $scope.NUM_QUESTIONS_PER_QUIZ; j++) {
 
-                if ($scope.INSTITUTE_PEOPLE[i].answers[j] == userAnswers[j]) {
+                // get question j id/order
+                var questionJOrder = $scope.questions[j].qid;
+
+                if ($scope.INSTITUTE_PEOPLE[i].answers[questionJOrder] == userAnswers[j]) {
                     userMatches[i]++;
                 }
             }
@@ -197,6 +205,8 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
         return userMatches;
     };
 
+    // finds max of the array userMatches
+    // returns an array of indices where that person has the maximum matching answers
     $scope.getMatchIndex = function(userMatches) {
         var max = Math.max.apply(null, userMatches);
         var matchIndexArray = new Array();
@@ -207,14 +217,6 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
         }
         return matchIndexArray;
     };
-
-    // document ready function
-    angular.element(document).ready(function () {
-
-        $timeout( function() {
-            $scope.scrollToHeaderBottom();
-        }, 90);
-    });
 });
 
 
