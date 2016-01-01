@@ -45,15 +45,15 @@
          ng-class="{fadeOut: fadeOutQuestion, fadeIn: fadeInQuestion}">
 
         <div class="question-heading">
-            <h3 class="question-title color-effect">{{question}}</h3>
+            <h3 class="question-title color-effect">{{questionObject.question}}</h3>
         </div>
         <div class="question-body" data-selected-answer="">
             <div class="answer img-rounded"
-                ng-repeat="answer in answers"
+                ng-repeat="answer in questionObject.answers"
                 ng-class="{hoverAnswer: hover, chosenAnswer: click}"
                 ng-mouseenter="hover = true"
                 ng-mouseleave="hover = false"
-                ng-click="click = true; nextQuestion($index)">
+                ng-click="click = true; submitAnswer(questionObject.order, $index)">
                 {{answer}}
             </div>
         </div>

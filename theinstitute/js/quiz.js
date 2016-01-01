@@ -50,7 +50,7 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
     $scope.questions = new Array();
     $scope.questionsOrder = new Array();
     $scope.answers = new Array();
-    $scope.question = "";
+    $scope.questionObject = "";
 
     $scope.currentQuizStep = 0;
     $scope.currentQuestionNum = 0;
@@ -58,7 +58,7 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
     $scope.NUM_QUESTIONS_PER_QUIZ = 9;
     $scope.NUM_TOTAL_QUESTIONS = 18;
 
-    $scope.userAnswers = new Array();
+    $scope.userAnswers = [-1, -1, -1, -1, -1, -1, -1, -1, -1];
     $scope.yourMatch = { name : "Institute Mom", img : "" , answers : [], bio : "Im ur mom"};
     $scope.yourMatch = {name : 'Ben Meyerson',  img : "content/benMeyerson.jpg", answers : [3, 0, 3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], bio : "You're a Ben! Bens are an odd-toed ungulate mammal belonging to the taxonomic family Equidae. The horse has evolved over the past 45 to 55 million years from a small multi-toed creature, Hyracotherium, into the large, single-toed animal of today. Humans began to domesticate horses around 4000 BC, and their domestication is believed to have been widespread by 3000 BC. Horses in the subspecies caballus are domesticated, although some domesticated populations live in the wild as feral horses. These feral populations are not true wild horses, as this term is used to describe horses that have never been domesticated, such as the endangered Przewalski\'s horse, a separate subspecies, and the only remaining true wild horse. There is an extensive, specialized vocabulary used to describe equine-related concepts, covering everything from anatomy to life stages, size, colors, markings, breeds, locomotion, and behavior. Horses' anatomy enables them to make use of speed to escape predators and they have a well-developed sense of balance and a strong fight-or-flight response. Related to this need to flee from predators in the wild is an unusual trait: horses are able to sleep both standing up and lying down. Female horses, called mares, carry their young for approximately 11 months, and a young horse, called a foal, can stand and run shortly following birth. Most domesticated horses begin training under saddle or in harness between the ages of two and four. They reach full adult development by age five, and have an average lifespan of between 25 and 30 years. Horse breeds are loosely divided into three categories based on general temperament: spirited \"hot bloods\" with speed and endurance; \"cold bloods\", such as draft horses and some ponies, suitable for slow, heavy work; and \"warmbloods\", developed from crosses between hot bloods and cold bloods, often focusing on creating breeds for specific riding purposes, particularly in Europe. There are more than 300 breeds of horse in the world today, developed for many different uses. Horses and humans interact in a wide variety of sport competitions and non-competitive recreational pursuits, as well as in working activities such as police work, agriculture, entertainment, and therapy. Horses were historically used in warfare, from which a wide variety of riding and driving techniques developed, using many different styles of equipment and methods of control. Many products are derived from horses, including meat, milk, hide, hair, bone, and pharmaceuticals extracted from the urine of pregnant mares. Humans provide domesticated horses with food, water and shelter, as well as attention from specialists such as veterinarians and farriers."},
 
@@ -70,6 +70,7 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
         var shuffledQuestionIndex;
         for (var i = 0; i < $scope.NUM_QUESTIONS_PER_QUIZ; i++) {
             shuffledQuestionIndex = shuffledOrderArray[i];
+            $scope.QUESTIONS_DB[shuffledQuestionIndex].order = i;
             $scope.questions.push($scope.QUESTIONS_DB[shuffledQuestionIndex]);
         }
         console.log($scope.questions);
@@ -83,6 +84,10 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
 
 
     // todo quiz not showing match page
+
+    // todo multiclick on question causes bug
+
+
 
 
 
@@ -113,15 +118,14 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
     $scope.startQuiz = function() {
         $scope.fillQuestionsArray();
         $scope.currentQuizStep++;
-        $scope.scrollToHeaderBottom();
+        //$scope.scrollToHeaderBottom();
         $scope.fadeInQuestion = true;
         $scope.resetFadeEffects();
         $scope.getQuestion();
     };
 
-    $scope.nextQuestion = function(answerNumber) {
+    $scope.nextQuestion = function() {
         $scope.fadeOutQuestion = true;
-        $scope.submitAnswer(answerNumber);
 
         // wait for previous question to fade out before changing the model
         $timeout( function() {
@@ -129,26 +133,26 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
                 $scope.currentQuizStep++;
                 $scope.submitQuiz();
             } else {
-                    $scope.getQuestion();
-                    $scope.scrollToHeaderBottom();
-                    $scope.fadeInQuestion = true;
-                    $scope.resetFadeEffects();
+                $scope.getQuestion();
+                $scope.scrollToHeaderBottom();
+                $scope.fadeInQuestion = true;
+                $scope.resetFadeEffects();
             }
         }, 1000);
     };
 
     $scope.isEndOfQuiz = function() {
-        return $scope.currentQuestionNum >= $scope.NUM_TOTAL_QUESTIONS;
+        return $scope.currentQuestionNum >= $scope.NUM_QUESTIONS_PER_QUIZ;
     };
 
-    $scope.submitAnswer = function(answerNumber) {
-        $scope.userAnswers.push(answerNumber);
-        $scope.currentQuestionNum++;
+    $scope.submitAnswer = function(questionNumber, answerNumber) {
+        $scope.userAnswers[questionNumber] = answerNumber;
+        $scope.currentQuestionNum = questionNumber + 1;
+        $scope.nextQuestion();
     };
 
     $scope.getQuestion = function() {
-        $scope.question = $scope.questions[$scope.currentQuestionNum].question;
-        $scope.answers = $scope.questions[$scope.currentQuestionNum].answers;
+        $scope.questionObject = $scope.questions[$scope.currentQuestionNum];
     };
 
     $scope.submitQuiz = function() {
