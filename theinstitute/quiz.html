@@ -31,7 +31,7 @@
     </ul>
 </div>
 
-<div class="jumbotron" ng-show="currentQuizStep == 0" ng-hide="currentQuizStep != 0" ng-init="currentQuizStep = 0">
+<div class="jumbotron" ng-show="currentQuizStep == 0" ng-hide="currentQuizStep != 0" ng-init="currentQuizStep = 2">
     <h1 class="color-effect">Who's your spirit <br>Institute member?</h1>
     <p><a class="start-quiz-button btn btn-primary btn-lg color-effect"
           href=""
@@ -41,8 +41,9 @@
 
 <div class="quiz-content" ng-show="currentQuizStep == 1" ng-hide="currentQuizStep != 1">
     <div class="question"
-         ng-init="fadeInQuestion = false; fadeOutQuestion = false"
-         ng-class="{fadeOut: fadeOutQuestion, fadeIn: fadeInQuestion}">
+        ng-init="fadeInQuestion = false; fadeOutQuestion = false; changingQuestionModel = false;"
+        ng-class="{fadeOut: fadeOutQuestion, fadeIn: fadeInQuestion}"
+        ng-hide="changingQuestionModel">
 
         <div class="question-heading">
             <h3 class="question-title color-effect">{{questionObject.question}}</h3>
@@ -69,7 +70,8 @@
     <div class="matchBio">
         {{yourMatch.bio}}
     </div>
-    <a class="btn btn-default retakeQuiz color-effect" role="button" ng-click="$scope.currentQuizStep = 2; startQuiz()">Retake Quiz</a>
+    <a class="btn btn-default endQuizButton color-effect" role="button" ng-click="$scope.currentQuizStep = 2; scrollToHeaderBottom(); startQuiz()">Retake Quiz</a>
+    <a class="btn btn-default endQuizButton color-effect" role="button" ng-click="">View Stats</a>
 </div>
 
 <div class="emptyDiv"></div>

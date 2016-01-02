@@ -153,11 +153,11 @@ a:hover.start-quiz-button {
     padding-bottom: 2%;
     padding-top: 2%;
     font-family: 'Arvo', serif;
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 .matchName {
-    font-size: 6vw;
+    font-size: 5vw;
     text-align: center;
     margin-bottom: 10px;
 }
@@ -167,17 +167,22 @@ a:hover.start-quiz-button {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: 20px;
+    width: 250px;
+    height: 250px;
 }
 
 .matchBio {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y:auto;
 }
 
-.retakeQuiz {
+.endQuizButton {
     width: 100%;
     color: #19A45D;
     border: solid 1px #19A45D;
     background-color: #ffffff;
+    margin-bottom: 10px;
 }
 
 a:hover.retakeQuiz {
