@@ -53,7 +53,7 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
     $scope.currentQuizStep = 0;
     $scope.currentQuestionNum = 0;
     $scope.NUM_PEOPLE = 14;
-    $scope.NUM_QUESTIONS_PER_QUIZ = 3;
+    $scope.NUM_QUESTIONS_PER_QUIZ = 9;
     $scope.NUM_TOTAL_QUESTIONS = 18;
 
     // create array of length NUM_QUESTIONS_PER_QUIZ with all elements = -1

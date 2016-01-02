@@ -31,7 +31,7 @@
     </ul>
 </div>
 
-<div class="jumbotron" ng-show="currentQuizStep == 0" ng-hide="currentQuizStep != 0" ng-init="currentQuizStep = 2">
+<div class="jumbotron" ng-show="currentQuizStep == 0" ng-hide="currentQuizStep != 0" ng-init="currentQuizStep = 0">
     <h1 class="color-effect">Who's your spirit <br>Institute member?</h1>
     <p><a class="start-quiz-button btn btn-primary btn-lg color-effect"
           href=""
@@ -58,6 +58,9 @@
                 {{answer}}
             </div>
         </div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar background-color-effect" role="progressbar" ng-style="{ 'width' : (questionObject.order + 1) * 10 + '%'}"></div>
     </div>
 </div>
 
