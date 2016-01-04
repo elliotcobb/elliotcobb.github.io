@@ -63,7 +63,7 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
     // create array of length NUM_QUESTIONS_PER_QUIZ with all elements = -1
     $scope.userAnswers = Array.apply(null, Array($scope.NUM_QUESTIONS_PER_QUIZ)).map(Number.prototype.valueOf,-1);
     $scope.yourMatch = { name : "_@_", img : "content/meghanWales.jpg" , answers : [], bio : "_@_"};
-    $scope.yourMatch = {name : 'Aliza Small ',  hallOfFame : true, img : "content/alizaSmall.jpg", answers : [0, 1, 2, 3, 8, 2, 0, 1, 1, 1, 0, 3, 0, 0, 1, 2, 0, 1], bio : "You bear an uncanny resemblance to one of the Institute's greatest leaders: Aliza Small! You're practically Catherine the Great."};
+    //$scope.yourMatch = {name : 'Aliza Small ',  hallOfFame : true, img : "content/alizaSmall.jpg", answers : [0, 1, 2, 3, 8, 2, 0, 1, 1, 1, 0, 3, 0, 0, 1, 2, 0, 1], bio : "You bear an uncanny resemblance to one of the Institute's greatest leaders: Aliza Small! You're practically Catherine the Great."};
 
     $scope.scrollHeight = $('.header').position().top + $('.header').height();
 
