@@ -35,21 +35,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quiz.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="quiz.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/quiz.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.5306122" vertical-offset="90" max-vertical-offset="1470">
+            <state vertical-scroll-proportion="-43.75" vertical-offset="90" max-vertical-offset="1470">
               <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="quiz.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="quiz.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/quiz.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="3525">
-              <caret line="65" column="303" selection-start-line="65" selection-start-column="303" selection-end-line="65" selection-end-column="303" />
+            <state vertical-scroll-proportion="0.14788732" vertical-offset="0" max-vertical-offset="3525">
+              <caret line="7" column="316" selection-start-line="7" selection-start-column="316" selection-end-line="7" selection-end-column="316" />
               <folding />
             </state>
           </provider>
@@ -675,18 +675,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/quiz.js">
+    <entry file="file://$PROJECT_DIR$/quiz.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="495" max-vertical-offset="3525">
-          <caret line="65" column="303" selection-start-line="65" selection-start-column="303" selection-end-line="65" selection-end-column="303" />
+        <state vertical-scroll-proportion="-43.75" vertical-offset="90" max-vertical-offset="1470">
+          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/quiz.html">
+    <entry file="file://$PROJECT_DIR$/js/quiz.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.5306122" vertical-offset="90" max-vertical-offset="1470">
-          <caret line="76" column="10" selection-start-line="76" selection-start-column="10" selection-end-line="76" selection-end-column="10" />
+        <state vertical-scroll-proportion="0.14788732" vertical-offset="0" max-vertical-offset="3525">
+          <caret line="7" column="316" selection-start-line="7" selection-start-column="316" selection-end-line="7" selection-end-column="316" />
           <folding />
         </state>
       </provider>
