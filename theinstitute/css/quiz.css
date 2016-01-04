@@ -194,6 +194,17 @@ a:hover.start-quiz-button {
     margin-bottom: 10px;
 }
 
+.hallOfFameTitle {
+    color: #E9BB23;
+    text-align: center;
+    font-size: 4vw;
+    margin-bottom: 20px;
+}
+
+.hallOfFameImg {
+    border: solid 15px #E9BB23;
+}
+
 .matchImg {
     display: block;
     margin-left: auto;
