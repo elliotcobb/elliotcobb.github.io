@@ -260,4 +260,8 @@ and (max-width : 680px) {
         width: 175px;
         height: 175px;
     }
+
+    .hallOfFameTitle {
+        font-size: 5vw;
+    }
 }
