@@ -25,7 +25,7 @@ var INSTITUTE_PEOPLE =
         {name : 'Jacob Barr', hallOfFame : false, img : "content/jacobBarr.jpg", answers : [2, 1, 3, 2, 3, 2, 2, 3, 2, 0, 3, 1, 0, 0, 3, 1, 0, 2], bio : "Congrats!  You're a Jacob Barr.  You love dogs, the Grateful Dead, and dogs that love the Grateful Dead.  You like to have fun and not take anything too seriously.  Have fun coasting through life on your good looks and charm."},
         {name : 'Meghan Wales',  hallOfFame : false, img : "content/meghanWales.jpg", answers : [3, 1, 1, 2, 4, 2, 2, 3, 1, 0, 3, 3, 3, 0, 0, 2, 0, 1], bio : "You're a Meghan Wales! You like hiding under blankets and don't understand why strangers would ever hug each other. Meghans talk about genitalia all the time no matter the situation but most people find this incredibly endearing. Adult coloring books? Yes. Pigeons? Yes. Genitalia? WHY ARE YOU ASKING THAT? DID YOU NOT READ THE PREVIOUS SENTENCES? Ughhhhh... Over it."},
         {name : 'Greg Lehrhoff',  hallOfFame : false, img : "content/gregLehrhoff.jpg", answers : [2, 1, 1, 1, 6, 0, 1, 2, 3, 2, 0, 1, 3, 2, 0, 0, 0, 2], bio : "You're a Greg Lehrhoff! You go by many names (Gorg Leeroof is among them). Gorgs are playful, but serious. Kind, but angry. Giving, but always stingy. Human, definitely human. You are romantic, but not in a cutesy way. Your friends describe you as \"sexy and dangerous motorcycle boy.\" You may lose your head sometimes, but you always find it and continue on with your day! The last time you lost your wallet was in fifth grade, but it wasn't a very good wallet anyway. I sense prosperity in your future. A decent sum of money is coming your way. Be wary of references to the dead. And you're always smiling!"},
-        {name : 'Sam Zinn',  hallOfFame : false, img : "content/samZinn.jpg", answers : [2, 0, 0, 0, 8, 0, 3, 3, 2, 2, 3, 3, 3, 3, 1, 0, 2, 3], bio : "Sam Zin is your equal he is. Separated at birth you were and now you can be reunited as one body. Email extreme_seamstress@hotmail.com for a price quote you will."},
+        {name : 'Sam Zinn',  hallOfFame : false, img : "content/samZinn.jpg", answers : [2, 0, 0, 0, 8, 0, 3, 3, 2, 2, 3, 3, 3, 3, 1, 0, 2, 3], bio : "Sam Zinn is your equal he is. Separated at birth you were and now you can be reunited as one body. Email extreme_seamstress@hotmail.com for a price quote you will."},
         {name : 'Emily Baker',  hallOfFame : false, img : "content/emilyBaker.jpg", answers : [2, 1, 2, 1, 6, 3, 0, 2, 0, 3, 2, 1, 3, 2, 3, 1, 0, 1], bio : "You're an Emily Baker! You're mildly cool and majorly allergic to peanuts. You should avoid phone calls, the outdoors, UV rays and manta rays. In 15 years, you will be drunk on a Bravo show. Shine on, you crazy diamond."},
         {name : 'Sarah Gruen',  hallOfFame : false, img : "content/sarahGruen.jpg", answers : [0, 1, 1, 0, 6, 0, 3, 0, 3, 2, 2, 3, 4, 0, 0, 1, 0, 2], bio : "Congratulations! You're a Sarah Gruen! Sarahs are clever and hungry. The freeze-pop flavor that can best be used to described a Sarah is pink. Other Sarahs include the late Knut the polar bear, Stacy from \"What Not to Wear,\" and the narrator of Serial. The spirit shoe of a Sarah is a size 8 Birkenstock."},
         {name : 'Lily Blumkin',  hallOfFame : false, img : "content/lilyBlumkin.jpg", answers : [2, 1, 0, 1, 2, 2, 2, 2, 1, 0, 2, 3, 4, 3, 3, 3, 0, 3], bio : "You're a Lily! Congratulations, Lilys are the curliest people in the room! What does that mean? You tell us! Lilys always know the proper way to pick your nose, and would be happy to teach you if you would just muster up the courage to ask! Lilys never need to muster up any courage though; they pick their noses in public all the time! Rock on!"},
@@ -58,7 +58,7 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
     $scope.currentQuizStep = 0;
     $scope.currentQuestionNum = 0;
     $scope.NUM_PEOPLE = 18;
-    $scope.NUM_QUESTIONS_PER_QUIZ = 9;
+    $scope.NUM_QUESTIONS_PER_QUIZ = 7;
     $scope.NUM_TOTAL_QUESTIONS = 18;
 
     // create array of length NUM_QUESTIONS_PER_QUIZ with all elements = -1
@@ -71,16 +71,18 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
 
     // document ready function
     angular.element(document).ready(function () {
-
         $timeout( function() {
             $scope.scrollToHeaderBottom();
         }, 90);
     });
 
+    // scrolls the page to just barely hide the site header
     $scope.scrollToHeaderBottom = function() {
         $(document).scrollTop($scope.scrollHeight);
     };
 
+    // called when starting the quiz
+    // readies the quiz questions and displays the first one
     $scope.startQuiz = function() {
         $scope.fillQuestionsArray();
         $scope.currentQuizStep = 1;
@@ -89,6 +91,8 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
         $scope.getQuestion();
     };
 
+    // populates $scope.questions with random questions from $scope.QUESTIONS_DB
+    // called each time a quiz is started
     $scope.fillQuestionsArray = function() {
         $scope.initQuestionsOrder();
         var shuffledOrderArray = $scope.shuffleArray($scope.questionsOrder);
@@ -100,6 +104,9 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
         }
     };
 
+    // returns an array of length $scope.NUM_TOTAL_QUESTIONS where
+    // each element counts up from 0
+    // ie: [0, 1, 2, 3, 4]
     $scope.initQuestionsOrder = function() {
         for (var i = 0; i < $scope.NUM_TOTAL_QUESTIONS; i++) {
             $scope.questionsOrder.push(i);
@@ -107,11 +114,23 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
         return $scope.questionsOrder;
     };
 
+    // function found on stack overflow
+    // takes in an array and returns the same array with all elements randomly shuffled
     $scope.shuffleArray = function(o) {
         for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
         return o;
     };
 
+    // records user answer and calls nextQuestion()
+    $scope.submitAnswer = function(questionNumber, answerNumber) {
+        $scope.userAnswers[questionNumber] = answerNumber;
+        $scope.currentQuestionNum = questionNumber + 1;
+        $scope.nextQuestion();
+    };
+
+    // called by submitAnswer()
+    // starts the fade out and fade in of the questions
+    // updates the model to show the next question
     $scope.nextQuestion = function() {
         $scope.fadeOutQuestion = true;
 
@@ -132,14 +151,9 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
         }, 990);
     };
 
+    // returns boolean
     $scope.isEndOfQuiz = function() {
         return $scope.currentQuestionNum >= $scope.NUM_QUESTIONS_PER_QUIZ;
-    };
-
-    $scope.submitAnswer = function(questionNumber, answerNumber) {
-        $scope.userAnswers[questionNumber] = answerNumber;
-        $scope.currentQuestionNum = questionNumber + 1;
-        $scope.nextQuestion();
     };
 
     // changes the model to show the current question
@@ -186,8 +200,6 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
 
         // shuffle matches, return random one
         matchIndexArray = $scope.shuffleArray(matchIndexArray);
-
-        console.log(matchIndexArray);
 
         return $scope.INSTITUTE_PEOPLE[matchIndexArray[0]];
     };
