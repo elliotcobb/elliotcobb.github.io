@@ -33,7 +33,7 @@
 
 <!--<canvas id="historyChart" width="400" height="400">Chart will go here</canvas>-->
 
-<div class="jumbotron" ng-show="currentQuizStep == 0" ng-hide="currentQuizStep != 0" ng-init="currentQuizStep = 0">
+<div class="jumbotron" ng-show="currentQuizStep == 0" ng-hide="currentQuizStep != 0" ng-init="currentQuizStep = 2">
     <h1 class="color-effect">Which <br> Institute Member <br> are you?</h1>
     <p><a class="start-quiz-button btn btn-primary btn-lg color-effect"
           href=""
@@ -79,6 +79,7 @@
         {{yourMatch.bio}}
     </div>
     <a class="btn btn-default endQuizButton color-effect" role="button" ng-click="$scope.currentQuizStep = 2; scrollToHeaderBottom(); startQuiz()">Retake Quiz</a>
+    <a class="btn btn-default endQuizButton color-effect" role="button" href="allMatches.html">See All Matches</a>
     <!--<a class="btn btn-default endQuizButton color-effect" role="button" ng-click="">View Stats</a>-->
 </div>
 
