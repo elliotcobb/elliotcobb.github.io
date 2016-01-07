@@ -17,7 +17,8 @@ const QUESTIONS_DB =
         {qid : '14', question : 'How do you shave?' , answers : ['Up then down', 'Down then up', 'Side to side', 'Inside then out']},
         {qid : '15', question : 'What would you rather have stuck to your fingers?' , answers : ['Other people\'s fingers', 'Magnets', 'Knives', 'The souls of your enemies']},
         {qid : '16', question : 'Which hip, young hashtag best represents your spirit?' , answers : ['#millenial', '#brand', '#cool', '#hip']},
-        {qid : '17', question : 'How enthusiastic are you about playing the interactive video game Rock Band with your pals?' , answers : ['lol it\'s not 2008', 'Maybe I would do one song?', 'I like to sing', 'give me Rock Band or give me death!!!!']}
+        {qid : '17', question : 'How often do you cry?' , answers : ['Once a week', 'Once a month', 'Once every six months?' , 'I can\'t remember the last time I cried']},
+        {qid : '18', question : 'How enthusiastic are you about playing the interactive video game Rock Band with your pals?' , answers : ['lol it\'s not 2008', 'Maybe I would do one song?', 'I like to sing', 'give me Rock Band or give me death!!!!']}
     ];
 
 var INSTITUTE_PEOPLE =
@@ -59,7 +60,7 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
     $scope.currentQuestionNum = 0;
     $scope.NUM_PEOPLE = 18;
     $scope.NUM_QUESTIONS_PER_QUIZ = 7;
-    $scope.NUM_TOTAL_QUESTIONS = 18;
+    $scope.NUM_TOTAL_QUESTIONS = 19;
 
     // create array of length NUM_QUESTIONS_PER_QUIZ with all elements = -1
     $scope.userAnswers = Array.apply(null, Array($scope.NUM_QUESTIONS_PER_QUIZ)).map(Number.prototype.valueOf,-1);
