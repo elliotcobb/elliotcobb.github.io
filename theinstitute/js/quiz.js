@@ -31,9 +31,9 @@ var INSTITUTE_PEOPLE =
         {name : 'Sarah Gruen',  hallOfFame : false, img : "content/sarahGruen.jpg", answers : [0, 1, 1, 0, 6, 0, 3, 0, 3, 2, 2, 3, 4, 0, 0, 1, 0, 1, 2], bio : "Congratulations! You're a Sarah Gruen! Sarahs are clever and hungry. The freeze-pop flavor that can best be used to described a Sarah is pink. Other Sarahs include the late Knut the polar bear, Stacy from \"What Not to Wear,\" and the narrator of Serial. The spirit shoe of a Sarah is a size 8 Birkenstock."},
         {name : 'Lily Blumkin',  hallOfFame : false, img : "content/lilyBlumkin.jpg", answers : [2, 1, 0, 1, 2, 2, 2, 2, 1, 0, 2, 3, 4, 3, 3, 3, 0, 1, 3], bio : "You're a Lily! Congratulations, Lilys are the curliest people in the room! What does that mean? You tell us! Lilys always know the proper way to pick your nose, and would be happy to teach you if you would just muster up the courage to ask! Lilys never need to muster up any courage though; they pick their noses in public all the time! Rock on!"},
         {name : 'Elliot Cobb', hallOfFame : false, img : "content/elliotCobb.jpg", answers : [3, 0, 0, 1, 6, 3, 3, 0, 1, 3, 1, 3, 1, 0, 1, 1, 3, 1, 1], bio : "Giddy up! You're an Elliot Cobb. You love old music, spicy food, and enjoying the outdoors. You currently own more sunscreen than alcohol, and you spent way too many hours making this online quiz. Congrats!"},
-        {name : 'Ari Glasgow ',  hallOfFame : false, img : "content/ariGlasgow.jpg", answers : [2, 1, 3, 2, 1, 0, 0, 0, 2, 0, 0, 0, 4, 3, 1, 3, 2, 1, 1], bio : "You're an Ari Glasgow! This is unfortunate for you. Aris are laid back 99.99% of the time, but insanely anxious that other .01%. You ate a cheeseburger every day for the first 25 days of college, and the biggest fan of your comedy is your mom! "},
-        {name : 'Aliza Small ',  hallOfFame : true, img : "content/alizaSmall.jpg", answers : [0, 1, 2, 3, 8, 2, 0, 1, 1, 1, 0, 3, 0, 0, 1, 2, 0, 2, 1], bio : "You bear an uncanny resemblance to one of the Institute's greatest leaders: Aliza Small! You're practically Catherine the Great."},
-        {name : 'Andrea Simons ',  hallOfFame : true, img : "content/andreaSimons.jpg", answers : [0, 0, 0, 2, 12, 2, 0, 1, 2, 1, 0, 0, 0, 3, 1, 2, 0, 2, 3], bio : "Guess what? You're a queen bee. Andreas are forever on the up and up. You love cocktails and a good TV show, but aren't afraid to work hard achieving what would be the impossible for mortals."},
+        {name : 'Ari Glasgow',  hallOfFame : false, img : "content/ariGlasgow.jpg", answers : [2, 1, 3, 2, 1, 0, 0, 0, 2, 0, 0, 0, 4, 3, 1, 3, 2, 1, 1], bio : "You're an Ari Glasgow! This is unfortunate for you. Aris are laid back 99.99% of the time, but insanely anxious that other .01%. You ate a cheeseburger every day for the first 25 days of college, and the biggest fan of your comedy is your mom! "},
+        {name : 'Aliza Small',  hallOfFame : true, img : "content/alizaSmall.jpg", answers : [0, 1, 2, 3, 8, 2, 0, 1, 1, 1, 0, 3, 0, 0, 1, 2, 0, 2, 1], bio : "You bear an uncanny resemblance to one of the Institute's greatest leaders: Aliza Small! You're practically Catherine the Great."},
+        {name : 'Andrea Simons',  hallOfFame : true, img : "content/andreaSimons.jpg", answers : [0, 0, 0, 2, 12, 2, 0, 1, 2, 1, 0, 0, 0, 3, 1, 2, 0, 2, 3], bio : "Guess what? You're a queen bee. Andreas are forever on the up and up. You love cocktails and a good TV show, but aren't afraid to work hard achieving what would be the impossible for mortals."},
         {name : 'Ben Meyerson',  hallOfFame : true, img : "content/benMeyerson.jpg", answers :[2, 1, 0, 3, 5, 3, 1, 0, 1, 0, 2, 1, 2, 3, 3, 0, 0, 2, 2], bio : "You're a Ben! Bens are an odd-toed ungulate mammal belonging to the taxonomic family Equidae. The horse has evolved over the past 45 to 55 million years from a small multi-toed creature, Hyracotherium, into the large, single-toed animal of today. Humans began to domesticate horses around 4000 BC, and their domestication is believed to have been widespread by 3000 BC. Horses in the subspecies caballus are domesticated, although some domesticated populations live in the wild as feral horses. These feral populations are not true wild horses, as this term is used to describe horses that have never been domesticated, such as the endangered Przewalski\'s horse, a separate subspecies, and the only remaining true wild horse. There is an extensive, specialized vocabulary used to describe equine-related concepts, covering everything from anatomy to life stages, size, colors, markings, breeds, locomotion, and behavior. Horses' anatomy enables them to make use of speed to escape predators and they have a well-developed sense of balance and a strong fight-or-flight response. Related to this need to flee from predators in the wild is an unusual trait: horses are able to sleep both standing up and lying down. Female horses, called mares, carry their young for approximately 11 months, and a young horse, called a foal, can stand and run shortly following birth. Most domesticated horses begin training under saddle or in harness between the ages of two and four. They reach full adult development by age five, and have an average lifespan of between 25 and 30 years. Horse breeds are loosely divided into three categories based on general temperament: spirited \"hot bloods\" with speed and endurance; \"cold bloods\", such as draft horses and some ponies, suitable for slow, heavy work; and \"warmbloods\", developed from crosses between hot bloods and cold bloods, often focusing on creating breeds for specific riding purposes, particularly in Europe. There are more than 300 breeds of horse in the world today, developed for many different uses. Horses and humans interact in a wide variety of sport competitions and non-competitive recreational pursuits, as well as in working activities such as police work, agriculture, entertainment, and therapy. Horses were historically used in warfare, from which a wide variety of riding and driving techniques developed, using many different styles of equipment and methods of control. Many products are derived from horses, including meat, milk, hide, hair, bone, and pharmaceuticals extracted from the urine of pregnant mares. Humans provide domesticated horses with food, water and shelter, as well as attention from specialists such as veterinarians and farriers."},
         {name : 'Jacob Hafey',  hallOfFame : false, img : "content/jacobHafey.jpg", answers : [2, 1, 1, 2, 1, 1, 2, 3, 3, 0, 1, 1, 3, 3, 3, 1, 2, 2, 0], bio : "You're too Scoots for Tutes! You are most likely wanted by several government agencies for crimes you forget if you committed. If you see someone who wears glasses, make sure to point and laugh at them! You've earned it."},
         {name : 'Sam Gordon',  hallOfFame : false, img : "content/samGordon.jpg", answers : [0, 1, 3, 1, 0, 0, 3, 0, 3, 1, 0, 2, 1, 2, 0, 1, 2, 2, 1], bio : "You're Sam Gordon. You like movies. You like skateboards. You like tiramisu. You like Tetris. You like warmth. You like Ike. You are white. You have hair. You are male. You are Jewish. You have chromosomes. You are reverent. You are aged."},
@@ -48,7 +48,7 @@ var INSTITUTE_PEOPLE =
 // initialize AngularJS
 var quizApp = angular.module('quizApp', []);
 
-quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
+quizApp.controller('QuizCtrl', function ($scope, $timeout, $http) {
 
     $scope.INSTITUTE_PEOPLE = INSTITUTE_PEOPLE;
     $scope.QUESTIONS_DB = QUESTIONS_DB;
@@ -59,20 +59,25 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
     $scope.currentQuizStep = 0;
     $scope.currentQuestionNum = 0;
     $scope.NUM_PEOPLE = 18;
-    $scope.NUM_QUESTIONS_PER_QUIZ = 7;
+    $scope.NUM_QUESTIONS_PER_QUIZ = 6;
     $scope.NUM_TOTAL_QUESTIONS = 19;
 
     // create array of length NUM_QUESTIONS_PER_QUIZ with all elements = -1
     $scope.userAnswers = Array.apply(null, Array($scope.NUM_QUESTIONS_PER_QUIZ)).map(Number.prototype.valueOf,-1);
     $scope.yourMatch = { name : "_@_", img : "content/meghanWales.jpg" , answers : [], bio : "_@_"};
-    //$scope.yourMatch = {name : 'Jehan Madhani ',  hallOfFame : false, img : "content/ceiliHale.jpg", answers : [0, 0, 0, 2, 12, 2, 0, 1, 2, 1, 0, 0, 0, 3, 1, 2, 0, 3], bio : "Guess what? You're a queen bee. Andreas are forever on the up and up. You love cocktails and a good TV show, but aren't afraid to work hard achieving what would be the impossible for mortals."};
 
-    $scope.scrollHeight = $('.header').position().top + $('.header').height();
+    // statistics calculated through DB queries
+    $scope.numQuizzesTaken = 0;
+    $scope.yourMatchPercentage = 0.0;
+    $scope.matchStatsReady = false;
+
+
 
 
     // document ready function
     angular.element(document).ready(function () {
         $timeout( function() {
+            $scope.scrollHeight = $('.header').position().top + $('.header').height();
             $scope.scrollToHeaderBottom();
         }, 90);
     });
@@ -168,11 +173,12 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
     // sets yourMatch in the model which is displayed
     $scope.submitQuiz = function() {
         $scope.yourMatch = $scope.findMatch();
+        $scope.getDBMatchStats();
         $scope.scrollToHeaderBottom();
         $scope.resetQuizData();
     };
 
-    // sets neccesary data to init stages for when the
+    // sets necessary data to init stages for when the
     // "retake quiz" button is clicked
     $scope.resetQuizData = function() {
         // create array of length NUM_QUESTIONS_PER_QUIZ with all elements = -1
@@ -182,6 +188,15 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
         $scope.questions = new Array();
         $scope.questionsOrder = new Array();
     };
+
+    // called when "retake quiz" button is clicked
+    // resets data in preparation for a new quiz
+    $scope.prepareForRetakeQuiz = function() {
+        $scope.currentQuizStep = 2;
+        $scope.scrollToHeaderBottom();
+        $scope.startQuiz();
+        $scope.hideMatchStats();
+    }
 
     // resets $scope.fadeInQuestion and $scope.fadeOutQuestion to false
     // these trigger a question fadeOut or fadeIn when set to true
@@ -204,6 +219,35 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $window) {
 
         return $scope.INSTITUTE_PEOPLE[matchIndexArray[0]];
     };
+
+    // get statistics about yourMatch from the DB
+    // return a JavaScript object with the statistics
+    $scope.getDBMatchStats = function() {
+
+        $http({
+            method: "GET",
+            url: "http://localhost:8080/instituteDB?checkpoint=end&matchName=" + $scope.yourMatch.name
+        }).then(function successCallback(response) {
+            // this callback will be called asynchronously
+            // when the response is available
+
+            $scope.numQuizzesTaken = response.data.totalQuizzesTaken;
+            $scope.yourMatchPercentage = response.data.matchPercentage.toFixed(2) * 100;
+            $scope.matchStatsReady = true;
+
+        }, function errorCallback(response) {
+            // called asynchronously if an error occurs
+            // or server returns response with an error status.
+
+            return;
+        });
+    };
+
+    // hides the match statistics until fresh stats are ready to be displayed
+    $scope.hideMatchStats = function() {
+        $scope.matchStatsReady = false;
+    };
+
 
     // returns an array of length NUM_PEOPLE
     // each element of the array has an int signifying the number of matches

@@ -220,6 +220,10 @@ a:hover.start-quiz-button {
     overflow-y:auto;
 }
 
+.statistics {
+    margin-bottom: 20px;
+}
+
 .endQuizButton {
     width: 100%;
     color: #19A45D;

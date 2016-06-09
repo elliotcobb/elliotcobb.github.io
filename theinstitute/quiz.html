@@ -27,7 +27,7 @@
         <li role="presentation"><a class="pill-nav the-team" href="index.html">The Team</a></li>
         <li role="presentation"><a class="pill-nav videos" href="videos.html">Videos</a></li>
         <li role="presentation" class="active"><a class="pill-nav quiz" href="quiz.html">Quiz</a></li>
-        <li role="presentation"><a class="pill-nav about" href="about.html">About</a></li>
+        <!--<li role="presentation"><a class="pill-nav about" href="about.html">About</a></li>-->
     </ul>
 </div>
 
@@ -62,7 +62,7 @@
         </div>
     </div>
     <div class="progress">
-        <div class="progress-bar background-color-effect" role="progressbar" ng-style="{ 'width' : (questionObject.order + 1) * 13 + '%'}"></div>
+        <div class="progress-bar background-color-effect" role="progressbar" ng-style="{ 'width' : (questionObject.order + 1) * ( 90 / NUM_QUESTIONS_PER_QUIZ ) + '%'}"></div>
     </div>
 </div>
 
@@ -71,14 +71,17 @@
     <div class="matchName color-effect">
         {{yourMatch.name}}
     </div>
-    <img class="matchImg img-circle" ng-class="{hallOfFameImg: yourMatch.hallOfFame}" src="{{yourMatch.img}}" alt="stunning portrait of your special match">
+    <img class="matchImg img-circle" ng-class="{hallOfFameImg: yourMatch.hallOfFame}" ng-src="{{yourMatch.img}}" alt="stunning portrait of your special match">
     <div class="hallOfFameTitle" ng-show="yourMatch.hallOfFame" ng-hide="!yourMatch.hallOfFame">
         Institute Hall of Fame
     </div>
     <div class="matchBio">
         {{yourMatch.bio}}
     </div>
-    <a class="btn btn-default endQuizButton color-effect" role="button" ng-click="$scope.currentQuizStep = 2; scrollToHeaderBottom(); startQuiz()">Retake Quiz</a>
+    <div class="statistics" ng-show="matchStatsReady">
+        Out of {{numQuizzesTaken}} quizzes taken, {{yourMatchPercentage}}% of people also got {{yourMatch.name}}
+    </div>
+    <a class="btn btn-default endQuizButton color-effect" role="button" ng-click="prepareForRetakeQuiz();">Retake Quiz</a>
     <a class="btn btn-default endQuizButton color-effect" role="button" href="allMatches.html">See All Matches</a>
     <!--<a class="btn btn-default endQuizButton color-effect" role="button" ng-click="">View Stats</a>-->
 </div>
