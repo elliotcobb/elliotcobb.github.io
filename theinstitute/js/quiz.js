@@ -95,6 +95,7 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $http) {
         $scope.fadeInQuestion = true;
         $scope.resetFadeEffects();
         $scope.getQuestion();
+        $scope.logStartQuizCheckpointInDB();
     };
 
     // populates $scope.questions with random questions from $scope.QUESTIONS_DB
@@ -220,13 +221,18 @@ quizApp.controller('QuizCtrl', function ($scope, $timeout, $http) {
         return $scope.INSTITUTE_PEOPLE[matchIndexArray[0]];
     };
 
+    // tells the DB that a quiz has been started
+    $scope.logStartQuizCheckpointInDB = function() {
+        $http.get('http://theinstitute.herokuapp.com/instituteDB?checkpoint=start');
+    };
+
     // get statistics about yourMatch from the DB
     // return a JavaScript object with the statistics
     $scope.getDBMatchStats = function() {
 
         $http({
             method: "GET",
-            url: "http://localhost:8080/instituteDB?checkpoint=end&matchName=" + $scope.yourMatch.name
+            url: "http://theinstitute.herokuapp.com/instituteDB?checkpoint=end&matchName=" + $scope.yourMatch.name
         }).then(function successCallback(response) {
             // this callback will be called asynchronously
             // when the response is available
