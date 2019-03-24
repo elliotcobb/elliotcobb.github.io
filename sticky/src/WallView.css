@@ -1,0 +1,21 @@
+.wallView {
+  align-content: flex-start;
+  display: flex;
+  flex: 0 0 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+}
+
+.wallView-image {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+
+  height: 4567px;
+  width: 5928px;
+  transform: scale(0.4);
+  transform-origin: top left;
+}

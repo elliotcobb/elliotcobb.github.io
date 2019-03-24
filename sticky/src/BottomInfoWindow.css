@@ -1,0 +1,11 @@
+
+.bottomInfoWindow {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+
+.bottomInfoWindow-wrapper {
+  display: flex;
+  margin: 10px;
+}

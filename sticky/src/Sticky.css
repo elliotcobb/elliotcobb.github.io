@@ -1,0 +1,30 @@
+
+.sticky {
+  border-radius: 10px;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -10px;
+  height: 110px;
+  width: 110px;
+}
+
+.sticky--infoWindowVisible {
+  z-index: 2;
+}
+
+.sticky:hover {
+  border: solid 2px white;
+}
+
+.sticky-infoWindow {
+  position: absolute;
+  display: none;
+  padding: 0 20px;
+  z-index: 2;
+}
+
+.sticky--infoWindowVisible:hover > .sticky-infoWindow {
+  display: flex;
+  min-height: 110px;
+  width: 300px;
+}

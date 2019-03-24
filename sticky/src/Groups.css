@@ -1,0 +1,8 @@
+
+.groups-badge {
+  border: solid 2px;
+  border-radius: 12px;
+  font-weight: bold;
+  padding: 2px 12px;
+  margin-right: 10px;
+}
