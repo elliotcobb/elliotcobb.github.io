@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <style>
+            /* Basic styles for the spinner */
+            .spinner {
+                width: 200px;
+                height: 200px;
+                animation: spin 3s linear infinite;
+                margin: 100px auto; /* Center the spinner */
+            }
+
+            /* Animation to spin the spinner */
+            @keyframes spin {
+                0% {
+                    transform: rotate(0deg);
+                }
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        </style>
+        <script type="text/javascript">
+            const mainNames = ['Floofer', 'Booba', 'Bubba', 'Sweetie'];
+            const altNames = [
+                'Boof',
+                'Boofer',
+                'Cookabura',
+                'Flipper',
+                'Scooper',
+                'Smoky',
+                'Groaner',
+                'Suga',
+                'Suga plum',
+                'Pantry rat',
+                'Grump',
+                'I like fish',
+                'Dead fish',
+                'Burrower',
+                'Jumping bean',
+                'Doctor wife',
+                'Favorite John Mayer cover',
+                'Tiktok curator',
+                'Theater companion',
+                'Karaoke partner',
+                'Rock me like a baby mama',
+                'MA MA',
+                'Tuba booba',
+                'Dino face',
+                'Rolling log',
+            ];
+            const yesses = [
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes',
+                'Yes.',
+                'Yes.',
+                'Yes!',
+                'Yes!',
+                'Yes!',
+                'Yes!',
+                'Yes!',
+                'Of course',
+                'Uh... I dont know what dat is',
+                'Eyy',
+                'Ya',
+                'Does the jumping bean still jump?',
+                'Does the cuckaburra still go cacacacacaaaacacaa?',
+                'The answer, my friend, is blowing in the wind',
+                'Definitely',
+                'You always will be',
+                '"You bet your sweet ass, you are" - Abraham Lincoln',
+            ];
+            const smallImages = [
+                'img/us.jpg',
+                'img/us.png',
+                'img/us1.png',
+                'img/us2.png',
+            ];
+            const lgImages = [
+                'img/lg/us.jpg',
+                'img/lg/us1.jpg',
+                'img/lg/us2.jpg',
+                'img/lg/us3.png',
+                'img/lg/us4.png',
+                'img/lg/us5.png',
+                'img/lg/us6.png',
+                'img/lg/us7.png',
+                'img/lg/us8.png',
+            ];
+            // Function to pick a random element from an array
+            function getRandomElement(arr) {
+                // Generate a random index
+                const randomIndex = Math.floor(Math.random() * arr.length);
+                // Return the element at the random index
+                return arr[randomIndex];
+            }
+            const allNames = [...altNames, ...mainNames];
+            const setRandomName = () =>
+                (document.querySelector('.name').innerHTML =
+                    getRandomElement(allNames));
+            const getNewName = () => {
+                setRandomName();
+                document.querySelector('.answer').style.display = 'block';
+                document.querySelector(
+                    '.answer'
+                ).innerHTML = `<div class="spinner"><img src="${getRandomElement(
+                    smallImages
+                )}" />calculating...</div>`;
+                const spinnerTime = 1000 + Math.random() * 3000;
+                setTimeout(() => {
+                    document.querySelector('.answer').innerHTML =
+                        getRandomElement(yesses);
+                }, spinnerTime);
+            };
+        </script>
+        <div style="margin-top: 70px; text-align: center">
+            <h1>
+                Frieda still my
+                <button
+                    class="name"
+                    onClick="getNewName()"
+                    style="font-size: 20px"
+                >
+                    ________
+                </button>
+                ?
+            </h1>
+            <h1 class="answer" style="display: none; margin-top: 170px">Yes</h1>
+        </div>
+    </body>
+</html>
