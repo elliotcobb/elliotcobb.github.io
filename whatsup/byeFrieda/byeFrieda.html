@@ -1,26 +1,11 @@
 <!DOCTYPE html>
 <html>
-    <head> </head>
+    <head>
+        <title>Love you, Bubba</title>
+        <link rel="stylesheet" type="text/css" href="wildButton.css" />
+        <link rel="stylesheet" type="text/css" href="main.css" />
+    </head>
     <body>
-        <style>
-            /* Basic styles for the spinner */
-            .spinner {
-                width: 200px;
-                height: 200px;
-                animation: spin 3s linear infinite;
-                margin: 100px auto; /* Center the spinner */
-            }
-
-            /* Animation to spin the spinner */
-            @keyframes spin {
-                0% {
-                    transform: rotate(0deg);
-                }
-                100% {
-                    transform: rotate(360deg);
-                }
-            }
-        </style>
         <script type="text/javascript">
             const mainNames = ['Floofer', 'Booba', 'Bubba', 'Sweetie'];
             const altNames = [
@@ -117,21 +102,69 @@
                     document.querySelector('.answer').innerHTML =
                         getRandomElement(yesses);
                 }, spinnerTime);
+
+                // activate wild button
+                setTimeout(() => {
+                    document.querySelector('#wildButton').style.display =
+                        'block';
+                }, 5000);
+            };
+
+            const showHugPhoto = () => {
+                document.querySelector('.hugPhoto').src =
+                    getRandomElement(lgImages);
+                document.querySelector('.hugPhotoWrapper').style.display =
+                    'flex';
             };
         </script>
-        <div style="margin-top: 70px; text-align: center">
+        <div class="container">
+            <p>During your travels, if you're ever wondering...</p>
             <h1>
-                Frieda still my
+                Is Frieda still my
                 <button
                     class="name"
                     onClick="getNewName()"
-                    style="font-size: 20px"
+                    style="font-size: 24px"
                 >
                     ________
                 </button>
                 ?
             </h1>
-            <h1 class="answer" style="display: none; margin-top: 170px">Yes</h1>
+            <h1 class="answer" style="display: none; margin-top: 140px">Yes</h1>
+            <div class="hugPhotoWrapper">
+                <img class="hugPhoto" src="" />
+                <p>
+                    Thanks for giving me a hug. Here's a nice photo of us that I
+                    hope makes you feel as warm as a big bear hug from your
+                    bubba.
+                </p>
+                <p>
+                    Even though we're far apart, I still want to say I love you!
+                </p>
+            </div>
         </div>
+        <button id="wildButton" onClick="showHugPhoto()">Hug Me!</button>
+        <script>
+            function getRandomPosition() {
+                const button = document.getElementById('wildButton');
+                const maxX = window.innerWidth - button.clientWidth;
+                const maxY = window.innerHeight - button.clientHeight;
+                const randomX = Math.floor(Math.random() * maxX);
+                const randomY = Math.floor(Math.random() * maxY);
+                return { x: randomX, y: randomY };
+            }
+
+            function moveButton() {
+                const button = document.getElementById('wildButton');
+                const newPosition = getRandomPosition();
+                button.style.left = `${newPosition.x}px`;
+                button.style.top = `${newPosition.y}px`;
+            }
+
+            setInterval(moveButton, 900); // Move button every 500ms
+
+            // Initially position the button
+            moveButton();
+        </script>
     </body>
 </html>

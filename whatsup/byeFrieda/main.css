@@ -1,0 +1,40 @@
+body {
+    overflow-y: auto;
+}
+
+/* Basic styles for the spinner */
+.spinner {
+    width: 200px;
+    height: 200px;
+    animation: spin 3s linear infinite;
+    margin: 100px auto; /* Center the spinner */
+}
+
+/* Animation to spin the spinner */
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.hugPhotoWrapper {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    margin-top: 40px;
+}
+
+.hugPhoto {
+    max-width: 100%;
+}
+
+.container {
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
