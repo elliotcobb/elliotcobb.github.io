@@ -55,7 +55,7 @@ Abstraction means you only share necessary information between components. It ma
 
 Having a monolithic/non-modular component is like sending all of that in the email and letting the recipient figure out what's relevant - you're going to be 30 minutes late tomorrow.
 
-When designing components introduce abstractions, so each component only handles one task and doesn't need to know what the other tasks are.
+When designing components, introduce abstractions so each component only handles one task and doesn't need to know what the other tasks are.
 
 Example:
 
@@ -95,15 +95,41 @@ export default function TextInput({value, name, label, handleChange}) {
 What about something like this?
 
 ```js,
-export default function TextInput({value, name, label, state, stateSlice}) {
+export default function TextInput({value, name, label, isVdotAdminLoggedIn}) {
     return (
-        <label>
-            {label}
-            <input name={name} onChange={(e) => state.update({...state[stateSlice], e.target.value})} value={value} />
-        </label>
+        <>
+            <label>
+                {label}
+                <input name={name} value={value} />
+            </label>
+            {!!isVdotAdminLoggedIn && (
+                <button onClick={() => apiService.updateUserField(name, value)}>
+                    Sync user details
+                </button>
+            )}
+        </>
     );
 }
 ```
+
+<details>
+<summary>Maybe something like this would be more modular?</summary>
+
+```js,
+export default function TextInput({value, name, label, buttonElement}) {
+    return (
+        <>
+            <label>
+                {label}
+                <input name={name} value={value} />
+            </label>
+            {buttonElement}
+        </>
+    );
+}
+```
+</details>
+
 
 
 ## Developing a modularity sense of smell
