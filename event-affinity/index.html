@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script type="text/javascript">
-            // Define an array of URLs to redirect to
-            const urls = [
-                'https://docs.google.com/forms/d/e/1FAIpQLSdhyEHO4Epi-hVSKcvPfZF0wpTCA5PuYCem7Z84D9mpiw2W_g/viewform?usp=sf_link',
-                'https://docs.google.com/forms/d/e/1FAIpQLSfbKtmGA2G7Dqn2IUfFJPxcy9kEvFcz0FeKHewYNpgAgoFSIQ/viewform?usp=sf_link',
-                'https://docs.google.com/forms/d/e/1FAIpQLSeltf_Q_lYo6NlkCvK_IaIIvPdZrMcxUsekB9db1BcFFUMXdg/viewform?usp=sf_link',
-            ];
+  <head>
+    <script type="text/javascript">
+      // Define an array of URLs to redirect to
+      const urls = [
+        "https://docs.google.com/forms/d/e/1FAIpQLSdhyEHO4Epi-hVSKcvPfZF0wpTCA5PuYCem7Z84D9mpiw2W_g/viewform?usp=sf_link", // control
+        "https://docs.google.com/forms/d/e/1FAIpQLSfbKtmGA2G7Dqn2IUfFJPxcy9kEvFcz0FeKHewYNpgAgoFSIQ/viewform?usp=sf_link", // "hot"
+        "https://docs.google.com/forms/d/e/1FAIpQLSfbKtmGA2G7Dqn2IUfFJPxcy9kEvFcz0FeKHewYNpgAgoFSIQ/viewform?usp=sf_link", // "hot"
+        "https://docs.google.com/forms/d/e/1FAIpQLSeltf_Q_lYo6NlkCvK_IaIIvPdZrMcxUsekB9db1BcFFUMXdg/viewform?usp=sf_link", // "ugly"
+      ];
 
-            // Choose a random URL from the array
-            const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+      // Choose a random URL from the array
+      const randomUrl = urls[Math.floor(Math.random() * urls.length)];
+      console.log(randomUrl);
 
-            // Redirect to the randomly selected URL
-            window.location.href = randomUrl;
-        </script>
-    </head>
-    <body></body>
+      // Redirect to the randomly selected URL
+      window.location.href = randomUrl;
+    </script>
+  </head>
+  <body></body>
 </html>
