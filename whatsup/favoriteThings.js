@@ -12,3 +12,12 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+const confettiHandler = function (e) {
+    party.confetti(this, {
+        count: party.variation.range(20, 40),
+    });
+};
+document.querySelectorAll('*').forEach((element) => {
+    element.addEventListener('click', confettiHandler);
+});
