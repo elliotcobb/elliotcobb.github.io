@@ -674,6 +674,10 @@ video {
   overflow-x: auto;
 }
 
+.rounded-full {
+  border-radius: 9999px;
+}
+
 .p-4 {
   padding: 1rem;
 }
