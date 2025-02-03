@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="./utils.css" rel="stylesheet" />
+    <link href="../output.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body
+    class="bg-black text-white"
+    style="
+      font-family: 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+        sans-serif;
+    "
+  >
+    <div class="container max-w-2xl p-2 md:p-4 mx-auto space-y-10">
+      <div class="space-y-4">
+        <div>
+          <h1 class="text-xl text-gray-300">Your Shatter Lamp</h1>
+          <p class="text-3xl">Shatter lamp infiniti</p>
+        </div>
+
+        <div class="space-y-4">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip ex ea commodo consequat.
+          </p>
+        </div>
+
+        <div class="relative">
+          <img
+            src="./images/infiniti/lamp.jpg"
+            alt="shatter lamp"
+            class="rounded-md w-full h-full"
+          />
+          <img
+            class="absolute top-0 left-0 w-full h-full rounded-md opacity-0 transition-opacity duration-1000 ease-in-out scroll-fade"
+            src="./images/infiniti/lamp-labels.png"
+            alt="shatter lamp"
+          />
+        </div>
+      </div>
+    </div>
+    <style>
+      .scroll-fade {
+        opacity: 0;
+      }
+
+      .scroll-fade.visible {
+        opacity: 1;
+      }
+    </style>
+    <script>
+      // Create an Intersection Observer
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            // Add 'visible' class when element is in view
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+            } else {
+              entry.target.classList.remove("visible");
+            }
+          });
+        },
+
+        {
+          // Start transition when element is 20% visible
+          threshold: 0.9,
+        }
+      );
+
+      // Observe all elements with scroll-fade class
+      document.querySelectorAll(".scroll-fade").forEach((element) => {
+        observer.observe(element);
+      });
+    </script>
+  </body>
+</html>

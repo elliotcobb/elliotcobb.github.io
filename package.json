@@ -1,0 +1,11 @@
+{
+  "name": "elliotcobb.github.io",
+  "version": "1.0.0",
+  "scripts": {
+    "watch:css": "tailwindcss -i ./input.css -o ./output.css --watch",
+    "build:css": "tailwindcss -i ./input.css -o ./output.css"
+  },
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
