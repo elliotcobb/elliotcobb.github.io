@@ -1,3 +1,7 @@
+summary {
+  cursor: pointer;
+}
+
 .heart {
   position: absolute;
   left: 100px;
