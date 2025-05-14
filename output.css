@@ -634,8 +634,8 @@ video {
   margin-top: 0.5rem;
 }
 
-.mb-\[100px\] {
-  margin-bottom: 100px;
+.mb-16 {
+  margin-bottom: 4rem;
 }
 
 .flex {
@@ -698,10 +698,6 @@ video {
   flex-wrap: wrap;
 }
 
-.gap-4 {
-  gap: 1rem;
-}
-
 .space-x-4 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(1rem * var(--tw-space-x-reverse));
@@ -742,6 +738,14 @@ video {
 
 .rounded-md {
   border-radius: 0.375rem;
+}
+
+.border {
+  border-width: 1px;
+}
+
+.border-2 {
+  border-width: 2px;
 }
 
 .bg-black {
