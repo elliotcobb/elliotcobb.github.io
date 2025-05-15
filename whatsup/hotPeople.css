@@ -2,7 +2,7 @@ summary {
   cursor: pointer;
 }
 
-.heart {
+.floater {
   position: absolute;
   left: 100px;
   bottom: 20px;
@@ -10,24 +10,24 @@ summary {
   animation: floatUp 4s linear infinite;
 }
 
-/* Create multiple hearts at different positions */
-.heart:nth-child(1) {
+/* Create multiple floating elements at different positions */
+.floater:nth-child(1) {
   left: 10%;
   animation-delay: 0s;
 }
-.heart:nth-child(2) {
+.floater:nth-child(2) {
   left: 30%;
   animation-delay: 1s;
 }
-.heart:nth-child(3) {
+.floater:nth-child(3) {
   left: 50%;
   animation-delay: 2s;
 }
-.heart:nth-child(4) {
+.floater:nth-child(4) {
   left: 70%;
   animation-delay: 1.5s;
 }
-.heart:nth-child(5) {
+.floater:nth-child(5) {
   left: 90%;
   animation-delay: 0.5s;
 }
@@ -38,7 +38,7 @@ summary {
     opacity: 1;
   }
   100% {
-    transform: translateY(-100vh) scale(1.5);
+    transform: translateY(-50vh) scale(1.5);
     opacity: 0;
   }
 }
