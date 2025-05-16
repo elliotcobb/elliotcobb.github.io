@@ -1,383 +1,555 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link href="./utils.css" rel="stylesheet" />
-    <link href="../output.css" rel="stylesheet" />
-    <link href="./hotPeople.css" rel="stylesheet" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Hot people experiment</title>
-  </head>
-  <body
-    style="
-      font-family: 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
-        sans-serif;
-    "
-  >
-    <div class="container max-w-2xl p-2 md:p-4 mx-auto">
-      <div class="space-y-20">
-        <div>
-          <h1 class="text-3xl">
-            Do people attend parties just based on how hot everyone is?
-          </h1>
-          <p class="text-xl text-gray-400">
-            An airtight analysis by me, Elliot C.
-          </p>
-        </div>
-        <div class="space-y-4">
-          <p>
-            In the age of flaking on plans I often wonder what's getting people
-            out of the house. I'm only slightly ashamed to admit that I'm much
-            more likely to attend an event where everyone's super attractive.
-            Sue me. And I wonder how many people secretly or subconsciously feel
-            the same way...
-          </p>
-          <p>
-            So I designed this experiment to test if people are just scoping out
-            the hotties when they choose where to hangout.
-          </p>
-        </div>
-        <div class="space-y-4">
-          <h2 class="text-2xl">Experiment 1</h2>
-          <h2 class="text-lg text-gray-400">Who's hot?</h2>
-          <p>
-            First, I need to know who's hot and who's not. Hotness is a fungible
-            thing. In 1980's Dallas, it was big hair. In Edo Japan it was
-            wakushu boys with a shaved forelock. Now it's anyone who's able to
-            find employment and suitable housing.
-          </p>
-          <p>
-            To get a baseline sample, I downloaded 20 stock profile pictures and
-            had people rank them from 1 to 10. We also asked if you were
-            attracted to men, women, and or androgynous people.
-          </p>
-          <p>
-            Here are our 20 guinea pigs, our building blocks of human beauty.
-          </p>
-          <div class="flex flex-row flex-wrap">
-            <img class="profileImg" src="./images/hotPeople/man/1.jpg" />
-            <img class="profileImg" src="./images/hotPeople/man/29.jpg" />
-            <img class="profileImg" src="./images/hotPeople/woman/46.jpg" />
-            <img class="profileImg" src="./images/hotPeople/woman/48.jpg" />
-            <img class="profileImg" src="./images/hotPeople/man/68.jpg" />
-            <img class="profileImg" src="./images/hotPeople/man/52.jpg" />
-            <img class="profileImg" src="./images/hotPeople/woman/26.jpg" />
-            <img class="profileImg" src="./images/hotPeople/man/81.jpg" />
-            <img class="profileImg" src="./images/hotPeople/man/87.jpg" />
-            <img class="profileImg" src="./images/hotPeople/woman/49.jpg" />
-            <img class="profileImg" src="./images/hotPeople/woman/62.jpg" />
-            <img class="profileImg" src="./images/hotPeople/man/59.jpg" />
-            <img class="profileImg" src="./images/hotPeople/woman/11.jpg" />
-            <img class="profileImg" src="./images/hotPeople/woman/24.jpg" />
-            <img class="profileImg" src="./images/hotPeople/man/84.jpg" />
-            <img class="profileImg" src="./images/hotPeople/woman/72.jpg" />
-            <img class="profileImg" src="./images/hotPeople/woman/42.jpg" />
-            <img class="profileImg" src="./images/hotPeople/man/76.jpg" />
-            <img class="profileImg" src="./images/hotPeople/woman/83.jpg" />
-            <img class="profileImg" src="./images/hotPeople/man/80.jpg" />
-          </div>
-          <p>
-            They're all beautiful on the inside, save for that one guy, but what
-            about on the outside? We had to ask my rolodex to find out.
-          </p>
-          <p>What we found will shock you.</p>
-          <p class="italic">dramatic string quartet music builds</p>
-          <details class="space-y-4" style="margin-bottom: 100px">
-            <summary>And it's all coming up right after this...</summary>
-            <p>
-              At the container store, we believe life's most important boxes go
-              beyond the casket. From the modern Aura line of polyeurethene
-              storage bins to the classic little house on the prairie wood crate
-              look, we believe anyone can hoard discreetly in any style and for
-              any season.
-            </p>
-          </details>
-          <div class="space-y-4">
-            <h4 class="text-2xl mb-10">
-              Ok we're back. And here's what we found
-            </h4>
-
-            <details class="space-y-4">
-              <summary class="text-xl">
-                News flash: not everyone's attracted to everyone else
-              </summary>
-              <p>Out of 33 responses...</p>
-              <ul>
-                <li>19 people said they were attracted to men</li>
-                <li>26 people said they were attracted to women</li>
-                <li>
-                  12 people said they were attracted to androgynous people
-                </li>
-              </ul>
-            </details>
-
-            <details class="space-y-4">
-              <summary class="text-xl">
-                People rated the women's profiles higher
-              </summary>
-              <div>
-                <div class="font-bold">Avg score (1 - 10)</div>
-                <div><strong>Men</strong> 4.3</div>
-                <div><strong>Women</strong> 5.8</div>
-              </div>
-              <p>
-                This is surprised me at first, but I don't think it should.
-                We've gotten pretty good over the last 10k years at objectifying
-                women, and there were more participants who said they were
-                attracted to women (26) than men (19).
-              </p>
-              <p>
-                But interestingly, even people who said they weren't into women
-                rated the women's profile pics as more attractive, on average.
-              </p>
-              <img
-                src="./images/hotPeople/hotness-notintomen-chart.jpg"
-                class="w-[120%] -mx-[10%] max-w-none"
-              />
-              <p class="py-10">
-                And we can throw the androgynous fans in there as well.
-              </p>
-              <img
-                src="./images/hotPeople/hotness-3-line.jpg"
-                class="w-[120%] -mx-[10%] max-w-none"
-              />
-              <p>
-                They mostly split the difference between our more hetro-seeming
-                participants... except they went wild for photo number 16
-              </p>
-              <p>Wowza!</p>
-              <div>
-                <div class="relative max-w-[130px]">
-                  <img
-                    class="rounded-full"
-                    src="images/hotPeople/woman/48.jpg"
-                  />
-                  <div class="floater">❤️</div>
-                  <div class="floater">❤️</div>
-                  <div class="floater">❤️</div>
-                  <div class="floater">❤️</div>
-                  <div class="floater">❤️</div>
-                </div>
-              </div>
-              <p>
-                And they weren't as smitten with our bearded heartthrob, photo
-              </p>
-            </details>
-
-            <details class="space-y-16">
-              <summary class="text-xl">
-                Some faces were more polarizing than others...
-              </summary>
-
-              <details class="space-y-4">
-                <summary class="text-xl">Smallest standard deviation</summary>
-                <p>
-                  Photo #16 had the smallest standard deviation and the highest
-                  overall score, so we can go ahead and say. Everyone agrees -
-                  <span
-                    class="bg-gradient-to-r from-orange-400 via-orange-500 to-red-500"
-                    >total smokeshow</span
-                  >. Hats off to you, queen. Flawless. Everyone's loving the
-                  cut.
-                </p>
-                <div class="relative max-w-[130px]">
-                  <div class="text-4xl rotate-12 absolute top-0 left-10">
-                    👑
-                  </div>
-                  <img
-                    class="rounded-full pt-2"
-                    src="images/hotPeople/woman/48.jpg"
-                  />
-                  <div class="floater">🔥</div>
-                  <div class="floater">🔥</div>
-                  <div class="floater">🔥</div>
-                  <div class="floater">🔥</div>
-                  <div class="floater">🔥</div>
-                </div>
-              </details>
-              <details class="space-y-4">
-                <summary class="text-xl">Largest standard deviation</summary>
-                <p>People could not agree on photo #5. Can you blame em?</p>
-                <div class="flex items-center gap-4">
-                  <img
-                    class="rounded-full pt-2"
-                    src="images/hotPeople/man/68.jpg"
-                  />
-                  <div class="text-4xl">❓</div>
-                  <div class="text-4xl">❓</div>
-                  <div class="text-4xl">❓</div>
-                  <div class="text-4xl">❓</div>
-                  <div class="text-4xl">❓</div>
-                </div>
-                <p>
-                  I'm taking a good hard look at him right now, and I have to
-                  say I don't know what to think either. It's halfway like I'm
-                  looking in the mirror and half like I'm 5 Guinesses into an
-                  afternoon bender and Chum wants to take me double or nothing
-                  in darts.
-                </p>
-                <p>Let's break down the chart again.</p>
+    <head>
+        <link href="./utils.css" rel="stylesheet" />
+        <link href="../output.css" rel="stylesheet" />
+        <link href="./hotPeople.css" rel="stylesheet" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Hot people experiment</title>
+    </head>
+    <body
+        style="
+            font-family: 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell,
+                sans-serif;
+        "
+    >
+        <div class="container max-w-2xl p-2 md:p-4 mx-auto">
+            <div class="space-y-20">
                 <div>
-                  <img
-                    src="./images/hotPeople/hotness-3-line.jpg"
-                    class="w-[120%] -mx-[10%] max-w-none"
-                  />
+                    <h1 class="text-3xl">
+                        Do people attend parties just based on how hot everyone
+                        is?
+                    </h1>
+                    <p class="text-xl text-gray-400">
+                        An airtight analysis by me, Elliot C.
+                    </p>
                 </div>
-                <p>
-                  A bunch of people said "I'm not into men, but he's not so
-                  bad!". But their counterparts said "I'm into men, and he is
-                  not cutting it."
-                </p>
-                <p>
-                  A similar thing happened with other guy photos where folks who
-                  are supposedly "not into men" rated the men more highly than
-                  everyone else. Do you all have something you want to share? Or
-                  maybe you're just guessing what other people would find
-                  attractive...
-                </p>
-              </details>
-              <details class="space-y-4">
-                <summary class="text-xl">Biggest shocker</summary>
-                <p>
-                  Photo 16 takes our grand prize, but they weren't everyone's
-                  favorite. The "Not into men" group showered their praise on
-                  the whole field, giving out higher overall ratings. But they
-                  had a particular soft spot for...
-                </p>
-                <details class="space-y-4">
-                  <summary class="text-xl">Miss ponytail</summary>
-                  <img
-                    class="rounded-full"
-                    src="images/hotPeople/woman/72.jpg"
-                  />
-                  <p>
-                    Miss ponytail came in with her confident eye contact and
-                    questionable status as a legal adult and swept these people
-                    off their feet. I find it very interesting that this more
-                    feminine-looking photo got these non-men lovers all charged
-                    up, where as photo 16 was a top choice on average.
-                  </p>
-                  <p>
-                    Interesting side note - people in the "not into women"
-                    category had their own favorite as well - photo 15!
-                  </p>
-                  <img
-                    src="./images/hotPeople/woman/46.jpg"
-                    class="rounded-full"
-                  />
-                  <p>
-                    She slightly edged out photo 16 in their minds. Interesting!
-                  </p>
-                </details>
-              </details>
-              <details class="space-y-4">
-                <summary class="text-xl">Honorable mentions</summary>
-                <h4 class="text-xl">Hottest men</h4>
-                <div class="pb-10">
-                  <img
-                    src="./images/hotPeople/man/81.jpg"
-                    class="rounded-full"
-                  />
-                  <ul class="list-disc list-inside">
-                    <li>Hottest man overall 💥</li>
-                    <li>
-                      The turncoat award 🎭: Hottest man for ppl not into men
-                    </li>
-                  </ul>
+                <div class="space-y-4">
+                    <p>
+                        In the age of flaking on plans I often wonder what's
+                        getting people out of the house. I'm only slightly
+                        ashamed to admit that I'm much more likely to attend an
+                        event where everyone's super attractive. Sue me. And I
+                        wonder how many people secretly or subconsciously feel
+                        the same way...
+                    </p>
+                    <p>
+                        So I designed this experiment to test if people are just
+                        scoping out the hotties when they choose where to
+                        hangout.
+                    </p>
                 </div>
-                <div class="mb-4">
-                  <img
-                    src="./images/hotPeople/man/80.jpg"
-                    class="rounded-full"
-                  />
-                  <ul class="list-disc list-inside">
-                    <li>
-                      The gentleman's award 💰: Hottest man for those into men
-                    </li>
-                  </ul>
-                  <p>
-                    He's an acquired taste, but the true connoisseurs know he's
-                    a cut above the rest.
-                  </p>
+                <div class="space-y-4">
+                    <h2 class="text-2xl">Experiment 1</h2>
+                    <h2 class="text-lg text-gray-400">Who's hot?</h2>
+                    <p>
+                        First, I need to know who's hot and who's not. Hotness
+                        is a fungible thing. In 1980's Dallas, it was big hair.
+                        In Edo Japan it was wakushu boys with a shaved forelock.
+                        Now it's anyone who's able to find employment and
+                        suitable housing.
+                    </p>
+                    <p>
+                        To get a baseline sample, I downloaded 20 stock profile
+                        pictures and had people rank them from 1 to 10. We also
+                        asked if you were attracted to men, women, and or
+                        androgynous people.
+                    </p>
+                    <p>
+                        Here are our 20 guinea pigs, our building blocks of
+                        human beauty.
+                    </p>
+                    <div class="flex flex-row flex-wrap">
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/man/1.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/man/29.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/woman/46.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/woman/48.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/man/68.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/man/52.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/woman/26.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/man/81.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/man/87.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/woman/49.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/woman/62.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/man/59.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/woman/11.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/woman/24.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/man/84.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/woman/72.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/woman/42.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/man/76.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/woman/83.jpg"
+                        />
+                        <img
+                            class="profileImg"
+                            src="./images/hotPeople/man/80.jpg"
+                        />
+                    </div>
+                    <p>
+                        They're all beautiful on the inside, save for that one
+                        guy, but what about on the outside? We had to ask my
+                        rolodex to find out.
+                    </p>
+                    <p>What we found will shock you.</p>
+                    <p class="italic">dramatic string quartet music builds</p>
+                    <details class="space-y-4" style="margin-bottom: 100px">
+                        <summary>
+                            And it's all coming up right after this...
+                        </summary>
+                        <p>
+                            At the container store, we believe life's most
+                            important boxes go beyond the casket. From the
+                            modern Aura line of polyeurethene storage bins to
+                            the classic little house on the prairie wood crate
+                            look, we believe anyone can hoard discreetly in any
+                            style and for any season.
+                        </p>
+                    </details>
+                    <div class="space-y-4">
+                        <h4 class="text-2xl mb-10">
+                            Ok we're back. And here's what we found
+                        </h4>
+
+                        <details class="space-y-4">
+                            <summary class="text-xl">
+                                News flash: not everyone's attracted to everyone
+                                else
+                            </summary>
+                            <p>Out of 33 responses...</p>
+                            <ul>
+                                <li>
+                                    19 people said they were attracted to men
+                                </li>
+                                <li>
+                                    26 people said they were attracted to women
+                                </li>
+                                <li>
+                                    12 people said they were attracted to
+                                    androgynous people
+                                </li>
+                            </ul>
+                        </details>
+
+                        <details class="space-y-4">
+                            <summary class="text-xl">
+                                People rated the women's profiles higher
+                            </summary>
+                            <div>
+                                <div class="font-bold">Avg score (1 - 10)</div>
+                                <div><strong>Men</strong> 4.3</div>
+                                <div><strong>Women</strong> 5.8</div>
+                            </div>
+                            <p>
+                                This is surprised me at first, but I don't think
+                                it should. We've gotten pretty good over the
+                                last 10k years at objectifying women, and there
+                                were more participants who said they were
+                                attracted to women (26) than men (19).
+                            </p>
+                            <p>
+                                But interestingly, even people who said they
+                                weren't into women rated the women's profile
+                                pics as more attractive, on average.
+                            </p>
+                            <img
+                                src="./images/hotPeople/hotness-notintomen-chart.jpg"
+                                class="w-[120%] -mx-[10%] max-w-none"
+                            />
+                            <p class="py-10">
+                                And we can throw the androgynous fans in there
+                                as well.
+                            </p>
+                            <img
+                                src="./images/hotPeople/hotness-3-line.jpg"
+                                class="w-[120%] -mx-[10%] max-w-none"
+                            />
+                            <p>
+                                They mostly split the difference between our
+                                more hetro-seeming participants... except they
+                                went wild for photo number 16
+                            </p>
+                            <p>Wowza!</p>
+                            <div>
+                                <div class="relative max-w-[130px]">
+                                    <img
+                                        class="rounded-full"
+                                        src="images/hotPeople/woman/48.jpg"
+                                    />
+                                    <div class="floater">❤️</div>
+                                    <div class="floater">❤️</div>
+                                    <div class="floater">❤️</div>
+                                    <div class="floater">❤️</div>
+                                    <div class="floater">❤️</div>
+                                </div>
+                            </div>
+                            <p>
+                                And they weren't as smitten with our bearded
+                                heartthrob, photo
+                            </p>
+                        </details>
+
+                        <details class="space-y-16">
+                            <summary class="text-xl">
+                                Some faces were more polarizing than others...
+                            </summary>
+
+                            <details class="space-y-4">
+                                <summary class="text-xl">
+                                    Smallest standard deviation
+                                </summary>
+                                <p>
+                                    Photo #16 had the smallest standard
+                                    deviation and the highest overall score, so
+                                    we can go ahead and say. Everyone agrees -
+                                    <span
+                                        class="bg-gradient-to-r from-orange-400 via-orange-500 to-red-500"
+                                        >total smokeshow</span
+                                    >. Hats off to you, queen. Flawless.
+                                    Everyone's loving the cut.
+                                </p>
+                                <div class="relative max-w-[130px]">
+                                    <div
+                                        class="text-4xl rotate-12 absolute top-0 left-10"
+                                    >
+                                        👑
+                                    </div>
+                                    <img
+                                        class="rounded-full pt-2"
+                                        src="images/hotPeople/woman/48.jpg"
+                                    />
+                                    <div class="floater">🔥</div>
+                                    <div class="floater">🔥</div>
+                                    <div class="floater">🔥</div>
+                                    <div class="floater">🔥</div>
+                                    <div class="floater">🔥</div>
+                                </div>
+                            </details>
+                            <details class="space-y-4">
+                                <summary class="text-xl">
+                                    Largest standard deviation
+                                </summary>
+                                <p>
+                                    People could not agree on photo #5. Can you
+                                    blame em?
+                                </p>
+                                <div class="flex items-center gap-4">
+                                    <img
+                                        class="rounded-full pt-2"
+                                        src="images/hotPeople/man/68.jpg"
+                                    />
+                                    <div class="text-4xl">❓</div>
+                                    <div class="text-4xl">❓</div>
+                                    <div class="text-4xl">❓</div>
+                                    <div class="text-4xl">❓</div>
+                                    <div class="text-4xl">❓</div>
+                                </div>
+                                <p>
+                                    I'm taking a good hard look at him right
+                                    now, and I have to say I don't know what to
+                                    think either. It's halfway like I'm looking
+                                    in the mirror and half like I'm 5 Guinesses
+                                    into an afternoon bender and Chum wants to
+                                    take me double or nothing in darts.
+                                </p>
+                                <p>Let's break down the chart again.</p>
+                                <div>
+                                    <img
+                                        src="./images/hotPeople/hotness-3-line.jpg"
+                                        class="w-[120%] -mx-[10%] max-w-none"
+                                    />
+                                </div>
+                                <p>
+                                    A bunch of people said "I'm not into men,
+                                    but he's not so bad!". But their
+                                    counterparts said "I'm into men, and he is
+                                    not cutting it."
+                                </p>
+                                <p>
+                                    A similar thing happened with other guy
+                                    photos where folks who are supposedly "not
+                                    into men" rated the men more highly than
+                                    everyone else. Do you all have something you
+                                    want to share? Or maybe you're just guessing
+                                    what other people would find attractive...
+                                </p>
+                            </details>
+                            <details class="space-y-4">
+                                <summary class="text-xl">
+                                    Biggest shocker
+                                </summary>
+                                <p>
+                                    Photo 16 takes our grand prize, but they
+                                    weren't everyone's favorite. The "Not into
+                                    men" group showered their praise on the
+                                    whole field, giving out higher overall
+                                    ratings. But they had a particular soft spot
+                                    for...
+                                </p>
+                                <details class="space-y-4">
+                                    <summary class="text-xl">
+                                        Miss ponytail
+                                    </summary>
+                                    <img
+                                        class="rounded-full"
+                                        src="images/hotPeople/woman/72.jpg"
+                                    />
+                                    <p>
+                                        Miss ponytail came in with her confident
+                                        eye contact and questionable status as a
+                                        legal adult and swept these people off
+                                        their feet. I find it very interesting
+                                        that this more feminine-looking photo
+                                        got these non-men lovers all charged up,
+                                        where as photo 16 was a top choice on
+                                        average.
+                                    </p>
+                                    <p>
+                                        Interesting side note - people in the
+                                        "not into women" category had their own
+                                        favorite as well - photo 15!
+                                    </p>
+                                    <img
+                                        src="./images/hotPeople/woman/46.jpg"
+                                        class="rounded-full"
+                                    />
+                                    <p>
+                                        She slightly edged out photo 16 in their
+                                        minds. Interesting!
+                                    </p>
+                                </details>
+                            </details>
+                            <details class="space-y-4">
+                                <summary class="text-xl">
+                                    Honorable mentions
+                                </summary>
+                                <h4 class="text-xl">Hottest men</h4>
+                                <div class="pb-10">
+                                    <img
+                                        src="./images/hotPeople/man/81.jpg"
+                                        class="rounded-full"
+                                    />
+                                    <ul class="list-disc list-inside">
+                                        <li>Hottest man overall 💥</li>
+                                        <li>
+                                            The turncoat award 🎭: Hottest man
+                                            for ppl not into men
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="mb-4">
+                                    <img
+                                        src="./images/hotPeople/man/80.jpg"
+                                        class="rounded-full"
+                                    />
+                                    <ul class="list-disc list-inside">
+                                        <li>
+                                            The gentleman's award 💰: Hottest
+                                            man for those into men
+                                        </li>
+                                    </ul>
+                                    <p>
+                                        He's an acquired taste, but the true
+                                        connoisseurs know he's a cut above the
+                                        rest.
+                                    </p>
+                                </div>
+                            </details>
+                        </details>
+                    </div>
                 </div>
-              </details>
-            </details>
-          </div>
+                <div class="space-y-4">
+                    <div class="mb-16 space-y-4">
+                        <h2 class="text-2xl">Experiment 2</h2>
+                        <h2 class="text-lg text-gray-400">
+                            Will dangling these hotties in front of people make
+                            them more likely to attend an event?
+                        </h2>
+                    </div>
+                    <details class="space-y-4">
+                        <summary class="text-lg">
+                            Here's how it went down
+                        </summary>
+                        <div class="space-y-4">
+                            I took screenshots of 6 different Facebook event
+                            invites about
+                            <ul class="list-disc list-inside">
+                                <li>Bike party</li>
+                                <li>Jazz Concert</li>
+                                <li>Knitting</li>
+                                <li>Craft Fair</li>
+                                <li>Dance</li>
+                                <li>Indigenous Shellmound Ceremony</li>
+                            </ul>
+                            <p>
+                                and replaced the profile pictures with our
+                                hotties and notties.
+                            </p>
+                        </div>
+                        <p>
+                            Then I asked people to rate how interested they were
+                            in the event on a scale of 0 (not excited) to 4
+                            (excited)
+                        </p>
+                        <p>
+                            I chose these events since they spanned multiple
+                            hobbies. I wanted to see if hot people could pique
+                            people's interest regardless of the event.
+                        </p>
+                        <p>
+                            And there lies my whole thesis.
+                            <strong
+                                >I find that the people are more important than
+                                the activity.</strong
+                            >
+                            I like board games, but I wouldn't play them with
+                            just anyone. If anything, if there were a crew of
+                            people getting together just because they're into
+                            board games, I might be <em>less likely</em> to
+                            enjoy that event.
+                        </p>
+                        <p>
+                            Or take the knitting club example. Imagine a bunch
+                            of people getting together to knit. Are they
+                            grannies? That's all fine and good, but imagine
+                            they're all hot young people. Now that's a crew i'd
+                            be interested in! Creative people weird enough to
+                            take up knitting but still somehow conventionally
+                            attractive? I'm intrigued. Maybe this is all just
+                            telling of my phase of life, though. We should run a
+                            follow up experiment where we see if people who
+                            aren't actively dating care less about the
+                            smoke-shows and the nope-shows.
+                        </p>
+                        <h4 class="text-2xl">Ok, here's the experiment</h4>
+                        <details class="space-y-4">
+                            <summary class="text-xl">Control group</summary>
+                            <p>
+                                <strong>20</strong> people were in a control
+                                group that saw 6 event invites with placeholder
+                                profile images
+                            </p>
+                            <img
+                                class="border-2 rounded-md"
+                                src="./images/hotPeople/eventInvite-control.png"
+                                alt="a facebook event invite where the profile images are placeholder profile images"
+                            />
+                        </details>
+                        <details class="space-y-4">
+                            <summary class="text-xl">Hotties group</summary>
+                            <p>
+                                <strong>18</strong> people saw 6 event invites
+                                like this (the two highest scoring women pics
+                                and the 2 highest scoring men pics)
+                            </p>
+                            <img
+                                class="border-2 rounded-md"
+                                src="./images/hotPeople/eventInvite-hot.png"
+                                alt="a facebook event invite where the profile images are of the hot people"
+                            />
+                        </details>
+                        <details class="space-y-4">
+                            <summary class="text-xl">Notties group</summary>
+                            <p>
+                                <strong>22</strong> people saw 6 event invites
+                                like this (the two lowest scoring women pics and
+                                the 2 lowest scoring men pics)
+                            </p>
+                            <img
+                                class="border-2 rounded-md"
+                                src="./images/hotPeople/eventInvite-not.png"
+                                alt="a facebook event invite where the profile images are of the not hot people"
+                            />
+                        </details>
+                    </details>
+                </div>
+                <div class="space-y-4">
+                    <h2 class="text-2xl">What's next?</h2>
+                    <h2 class="text-lg text-gray-400">
+                        Start a pottery studio?
+                    </h2>
+                    <p>
+                        Gyms, bars, yoga studios, sports leagues, dance events.
+                        These are places where people go to see and be seen,
+                        whether that's top of mind or not.
+                    </p>
+                    <p>
+                        The other day I was walking by a workshop in San
+                        Francisco that had 10+ people bent over their work
+                        stations making things. They looked like stylish
+                        thirty-somethings who had just got off work and were
+                        getting their extra curriculars in. I didn't even know
+                        what they were doing, but just based on there being 10+
+                        men and women in there having fun I was drawn to the
+                        place. Also I like making things and DIY projects. By
+                        the time I crossed the street to take a closer look, the
+                        fact that they were making pottery was sort of a
+                        non-factor in my interest. It was more about "are these
+                        the kind of people I could see spending time with?"
+                    </p>
+                    <p>
+                        Maybe next I'll open a pottery studio and have my
+                        tuesday thursday cohort be total smokeshows and the
+                        monday wednesday cohort be more noshows. Which pottery
+                        studio would you be more intriguing as a passerby?
+                    </p>
+                </div>
+            </div>
         </div>
-        <div class="space-y-4">
-          <div class="mb-16 space-y-4">
-            <h2 class="text-2xl">Experiment 2</h2>
-            <h2 class="text-lg text-gray-400">
-              Will dangling these hotties in front of people make them more
-              likely to attend an event?
-            </h2>
-          </div>
-          <details class="space-y-4">
-            <summary class="text-lg">Here's how it went down</summary>
-            <p>
-              I took screenshots of 5 different Facebook event invites and
-              replaced the profile pictures with our hotties and notties.
-            </p>
-            <p>
-              Then I asked people to rate how interested they were in the event
-              on a scale of 0 (not excited) to 4 (excited)
-            </p>
-            <p>
-              A third of people saw 5 event invites that looked like this (the
-              two highest scoring women pics and the 2 highest scoring men pics)
-            </p>
-            <img
-              class="border-2 rounded-md"
-              src="./images/hotPeople/eventInvite-hot.png"
-              alt="a facebook event invite where the profile images are of the hot people"
-            />
-            <p>
-              A third of people saw 5 event invites like this (the two lowest
-              scoring women pics and the 2 lowest scoring men pics)
-            </p>
-            <img
-              class="border-2 rounded-md"
-              src="./images/hotPeople/eventInvite-not.png"
-              alt="a facebook event invite where the profile images are of the not hot people"
-            />
-            <p>
-              And a third of people were in a control group that saw 5 event
-              invites with placeholder profile images
-            </p>
-            <img
-              class="border-2 rounded-md"
-              src="./images/hotPeople/eventInvite-control.png"
-              alt="a facebook event invite where the profile images are of the not hot people"
-            />
-          </details>
-        </div>
-        <div class="space-y-4">
-          <h2 class="text-2xl">What's next?</h2>
-          <h2 class="text-lg text-gray-400">Start a pottery studio?</h2>
-          <p>
-            Gyms, bars, yoga studios, sports leagues, dance events. These are
-            places where people go to see and be seen, whether that's top of
-            mind or not.
-          </p>
-          <p>
-            The other day I was walking by a workshop in San Francisco that had
-            10+ people bent over their work stations making things. They looked
-            like stylish thirty-somethings who had just got off work and were
-            getting their extra curriculars in. I didn't even know what they
-            were doing, but just based on there being 10+ men and women in there
-            having fun I was drawn to the place. Also I like making things and
-            DIY projects. By the time I crossed the street to take a closer
-            look, the fact that they were making pottery was sort of a
-            non-factor in my interest. It was more about "are these the kind of
-            people I could see spending time with?"
-          </p>
-          <p>
-            Maybe next I'll open a pottery studio and have my tuesday thursday
-            cohort be total smokeshows and the monday wednesday cohort be more
-            noshows. Which pottery studio would you be more intriguing as a
-            passerby?
-          </p>
-        </div>
-      </div>
-    </div>
-  </body>
+    </body>
 </html>
